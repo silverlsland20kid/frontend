@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul::before {
+            content: "첫번째메뉴";
+        }
+
+        ul::after {
+            content: "마지막메뉴";
+        }
+
+        ul li:nth-child(3)::before {
+            content: "스폐셜";
+        }
+
+        ul li:nth-child(3)::after {
+            content: "(20개한정!)";
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+
+</body>
+
+</html>
