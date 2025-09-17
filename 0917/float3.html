@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .container {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 200px;
+            background-color: thistle;
+        }
+
+        header .logo {
+            float: left;
+            margin: 60px 0 0 50px;
+        }
+
+        header nav {
+            float: right;
+            margin: 60px 30px 0 0;
+        }
+
+        header nav ul li {
+            float: left;
+        }
+
+        header nav ul li a {
+            display: block;
+            padding: 15px;
+            background-color: silver;
+        }
+
+        header nav ul li a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .main {
+            height: 550px;
+            background-color: #ccc;
+        }
+
+        .main section {
+            width: 650px;
+            height: 550px;
+            background-color: cadetblue;
+            float: left;
+        }
+
+        aside {
+            width: 250px;
+            height: 550px;
+            background-color: steelblue;
+            float: right;
+        }
+
+        footer {
+            width: 100%;
+            height: 70px;
+            background-color: darksalmon;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo"><a href="#">더조은컴퓨터학원</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                    <li><a href="#">Menu4</a></li>
+                    <li><a href="#">Menu5</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+            <section></section>
+            <aside></aside>
+        </div>
+
+        <footer>
+            2025 &copy; Copyright Design By eunseom
+        </footer>
+    </div>
+</body>
+
+</html>

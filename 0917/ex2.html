@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Float Layout (1200px Centered)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font: 14px/1.5 "Noto Sans KR", system-ui, sans-serif;
+            color: #222
+        }
+
+        ul,
+        li {
+            list-style: none
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .box {
+            border: 1px solid #999;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .header {
+            height: 100px;
+            background-color: rgb(255, 215, 166);
+        }
+
+        .header .logo {
+            float: left;
+            width: 240px;
+            height: 98px;
+            padding: 0 16px;
+            background-color: #d3d3d3;
+            line-height: 98px;
+            text-align: center;
+        }
+
+        .header .gnb {
+            float: right;
+            width: 602px;
+            height: 47px;
+            text-align: center;
+            margin-top: 25px;
+            margin-right: 30px;
+        }
+
+        .gnb>ul {
+            border: 1px solid #666
+        }
+
+        .gnb>ul>li {
+            float: left;
+            width: 150px;
+            text-align: center;
+            border-left: 1px solid #666
+        }
+
+        .gnb>ul>li:first-child {
+            border-left: 0
+        }
+
+        .gnb>ul>li a {
+            display: block;
+            padding: 12px 0;
+            background: #eee;
+            font-weight: 700;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .visual {
+            height: 300px;
+            line-height: 300px;
+            border-top: none;
+        }
+
+        .content {
+            height: 200px;
+
+        }
+
+        .content .col {
+            float: left;
+            height: 198px;
+            padding: 16px;
+            line-height: 175px;
+        }
+
+        .content .col1,
+        .content .col2,
+        .content .col3 {
+            width: 33.3333%
+        }
+
+        .content .col2 {
+            border-left: 2px dotted #999;
+            border-right: 2px dotted #999
+        }
+
+        .footer {
+            height: 100px;
+            line-height: 68px;
+            border-top: none;
+        }
+
+        .footer .foot {
+            float: left;
+            height: 98px;
+            padding: 16px;
+        }
+
+        .footer .f1,
+        .footer .f3 {
+            width: 20%;
+        }
+
+        .footer .f1 {
+            background-color: tan;
+        }
+
+        .footer .f3 {
+            background-color: salmon;
+        }
+
+        .footer .f2 {
+            width: 60%;
+            background-color: rgb(255, 190, 49);
+        }
+
+        .footer .f2 {
+            border-left: 2px dotted #999;
+            border-right: 2px dotted #999
+        }
+
+        .big {
+            font-size: 24px;
+            color: #555;
+        }
+
+        .inner.center.big {
+            background-color: antiquewhite;
+        }
+
+        .content .col.col1 {
+            background-color: rgb(156, 255, 205);
+        }
+
+        .content .col.col2 {
+            background-color: rgb(255, 164, 164);
+        }
+
+        .content .col.col3 {
+            background-color: rgb(253, 194, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header box">
+            <div class="inner clearfix">
+                <h1 class="logo">로고</h1>
+                <nav class="gnb">
+                    <ul class="clearfix">
+                        <li><a href="#">MENU-1</a></li>
+                        <li><a href="#">MENU-2</a></li>
+                        <li><a href="#">MENU-3</a></li>
+                        <li><a href="#">MENU-4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="visual box center">
+            <div class="inner center big">이미지 슬라이드</div>
+        </section>
+
+        <section class="content box">
+            <div class="inner clearfix">
+                <div class="col col1 center big">공지사항 / 갤러리</div>
+                <div class="col col2 center big">배너</div>
+                <div class="col col3 center big">바로가기</div>
+            </div>
+        </section>
+
+        <footer class="footer box">
+            <div class="inner clearfix">
+                <div class="foot f1 center big">로고</div>
+                <div class="foot f2 center big">Copyright</div>
+                <div class="foot f3 center big">SNS</div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
