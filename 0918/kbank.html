@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .section1 {
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 30px 0;
+            border: 1px solid #333;
+        }
+
+        .section1 .bigbox li {
+            float: left;
+            width: 300px;
+            height: 200px;
+            padding: 20px 30px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin-right: 50px;
+        }
+
+        .section1 .bigbox li:last-child {
+            margin-right: 0;
+        }
+
+        .txt1 span {
+            display: inline-block;
+            padding: 7px;
+            background-color: cadetblue;
+            color: #fff;
+        }
+
+        .txt2 {
+            padding: 10px 0;
+            font-size: 18px;
+        }
+
+        .txt3 {
+            font-size: 15px;
+        }
+
+        .section2 {
+            width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            border-top: none;
+            padding: 25px 0;
+            height: 200px;
+        }
+
+        .quick {
+            float: left;
+            width: 200px;
+            height: 165px;
+            border: 1px solid #333;
+            margin-left: 0;
+            margin-right: 20px;
+            padding: 16px;
+        }
+
+        .quick h3 {
+            font-size: 26px;
+            margin-bottom: 6px
+        }
+
+        .quick a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #333;
+            text-decoration: none
+        }
+
+        .icons {
+            float: right;
+            width: 700px;
+            margin-right: 30px;
+        }
+
+        .icons ul {
+            padding-bottom: 18px
+        }
+
+        .icons li {
+            float: left;
+            width: 12.5%;
+            text-align: center;
+            color: #333;
+        }
+
+        .ico {
+            display: block;
+            width: 54px;
+            height: 38px;
+            margin: 0 auto 12px;
+        }
+
+        .icons p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section1">
+        <ul class="bigbox">
+            <li>
+                <div>
+                    <p class="txt1"><span>추천상품</span></p>
+                    <h3 class="txt2">건강한 자산관리 kb마이데이터</h3>
+                    <p class="txt3">높은 이율! 수수료 혜택!<br />목적별 자금관리를 통장 하나로!</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="txt1"><span>서비스</span></p>
+                    <h3 class="txt2">KB마이핏통장</h3>
+                    <p class="txt3">각 기관에 흩어진 나의 자산을<br />한 곳에 모아서 관리해보세요</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="txt1"><span>서비스</span></p>
+                    <h3 class="txt2">이동통신사서비스 Liiv M</h3>
+                    <p class="txt3">KB국민은행의 혁신금융서비스로<br />금융권 최초로 제공하는 이동통신서비스</p>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+    <section class="section2 clearfix">
+
+        <div class="quick">
+            <h3>금융상품</h3>
+            <a href="#">바로가기 &gt;</a>
+        </div>
+
+        <div class="icons">
+            <ul class="clearfix">
+                <li><span class="ico"><img src="images/icon8.png" alt=""></span>
+                    <p>예금</p>
+                </li>
+                <li><span class="ico"><img src="images/icon6.png" alt=""></span>
+                    <p>펀드</p>
+                </li>
+                <li><span class="ico"><img src="images/icon3.png" alt=""></span>
+                    <p>대출</p>
+                </li>
+                <li><span class="ico"><img src="images/icon5.png" alt=""></span>
+                    <p>신탁</p>
+                </li>
+                <li><span class="ico"><img src="images/icon4.png" alt=""></span>
+                    <p>ISA</p>
+                </li>
+                <li><span class="ico"><img src="images/icon7.png" alt=""></span>
+                    <p>보험/공제</p>
+                </li>
+                <li><span class="ico"><img src="images/icon1.png" alt=""></span>
+                    <p>골드</p>
+                </li>
+                <li><span class="ico"><img src="images/icon2.png" alt=""></span>
+                    <p>외화예금</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

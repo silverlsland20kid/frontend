@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>Float Only Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font: 14px/1.4 Arial, "Noto Sans KR", sans-serif;
+            color: #111
+        }
+
+        ul,
+        li {
+            list-style: none
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both
+        }
+
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+            background: #fff
+        }
+
+        .side {
+            float: left;
+            width: 200px;
+            min-height: 650px;
+            background: #ffc0cb;
+        }
+
+        .logo {
+            height: 120px;
+            padding: 24px 16px;
+            line-height: 90px;
+            text-align: center;
+        }
+
+        .logo b {
+            font-size: 36px;
+            letter-spacing: 1px
+        }
+
+        .menu {
+            margin: 16px;
+            border: 1px solid #333;
+            background: #ffd3dd;
+        }
+
+        .menu li {
+            border-top: 1px solid #777;
+            text-align: center;
+            padding: 15px 0;
+            color: #555
+        }
+
+        .menu li:first-child {
+            border-top: 0
+        }
+
+        .menu li a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .main {
+            float: left;
+            width: 800px;
+        }
+
+        .hero {
+            height: 350px;
+            background: #fff200;
+        }
+
+        .row.clearfix {
+            border-top: 0;
+            height: 200px;
+        }
+
+        .col {
+            float: left;
+            width: 33.3333%;
+            height: 200px;
+        }
+
+        .c1 {
+            background: #c6c6c6;
+        }
+
+        .c2 {
+            background: #b5b5b5;
+        }
+
+        .c3 {
+            background: #a3a3a3;
+        }
+
+        footer {
+            height: 100px;
+            background-color: antiquewhite;
+        }
+
+        footer .right {
+            width: 600px;
+            height: 100px;
+            float: right;
+        }
+
+        footer .f_logo {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(214, 182, 182);
+            float: left;
+        }
+
+        footer .f_menu {
+            width: 600px;
+            height: 50px;
+            background-color: rgb(194, 250, 245);
+        }
+
+        footer .f_copy {
+            width: 600px;
+            height: 50px;
+            background-color: rgb(230, 253, 186);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap clearfix">
+        <aside class="side">
+            <div class="logo"><b>LOGO</b></div>
+            <ul class="menu">
+                <li>MENU-1</li>
+                <li>MENU-2</li>
+                <li>MENU-3</li>
+                <li>MENU-4</li>
+            </ul>
+        </aside>
+
+        <section class="main">
+            <div class="hero"></div>
+
+            <div class="row clearfix">
+                <div class="col c1"></div>
+                <div class="col c2"></div>
+                <div class="col c3"></div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="right">
+                <div class="f_menu"></div>
+                <div class="f_copy"></div>
+            </div>
+            <div class="f_logo"></div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

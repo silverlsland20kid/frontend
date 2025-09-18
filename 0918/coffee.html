@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Jua&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .coffee_box {
+            width: 1800px;
+            /* height: 630px; */
+            overflow: hidden;
+            border: 1px solid #a5a5a5;
+            margin: 30px auto;
+            padding-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            color: #444;
+            letter-spacing: 1.5px;
+        }
+
+        .box {
+            width: 550px;
+            /* height: 270px; */
+            float: left;
+            margin: 30px 20px 0 25px;
+            border-radius: 10px;
+            border: 1px solid #bdd6ef;
+            padding: 20px 0;
+        }
+
+        .cbox_left {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 15px;
+            border-radius: 10px;
+        }
+
+        .cbox_left:hover {
+            box-shadow: 5px 5px 5px #ddd;
+            transition: all 0.5s;
+        }
+
+        .cbox_right {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 15px;
+            font-size: 12px;
+            border-radius: 10px;
+            background-color: #eff7ff;
+            box-shadow: 5px 5px 5px #ddd;
+        }
+
+        .cbox_right:hover {
+            background-color: #546d86;
+            transition: all 0.5s;
+        }
+
+        .cbox_right:hover p,
+        .cbox_right:hover .text {
+            color: white;
+        }
+
+        .sl_1 {
+            background: url(images/co_1.jpg) no-repeat center center / cover;
+        }
+
+        .sl_2 {
+            background: url(images/co_2.jpg) no-repeat center center / cover;
+        }
+
+        .sl_3 {
+            background: url(images/co_3.jpg) no-repeat center center / cover;
+        }
+
+        p {
+            padding: 35px 20px 20px 20px;
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 35px;
+            display: block;
+            font-family: "Gasoek One", sans-serif;
+            letter-spacing: 1.5px;
+        }
+
+        .text {
+            font-size: 12px;
+            color: #444;
+            display: block;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coffee_box">
+        <h1>커피의종류</h1>
+        <div class="box box1">
+            <div class="cbox_left sl_1">
+
+            </div>
+            <div class="cbox_right sr_1">
+                <p>
+                    <span class="title">왕메가헛개리카노</span>
+                    <img src="images/bar1.png" style="width: 190px; opacity: 0.5;">
+                    <br />
+                    <span class="text">BIG MEGA Oriental Raisin-Tea Americano</span><br />
+                    국내산 헛개수와 아메리카노를 블렌딩해 고소한 맛이 더욱 커진 왕메가사이즈 커피
+                </p>
+            </div>
+        </div>
+
+        <div class="box box2">
+            <div class="cbox_left sl_2">
+
+            </div>
+            <div class="cbox_right sr_2">
+                <p>
+                    <span class="title">할메가미숫커피</span>
+                    <img src="images/bar1.png" style="width: 190px; opacity: 0.5;">
+                    <br />
+                    <span class="text">MEGA MGC Mix coffeee Blend with Grain Powder</span><br />
+                    곡물의 향이 고소한 미숫가루와 달달한 믹스커피의 황금비율 조합
+                </p>
+            </div>
+        </div>
+
+        <div class="box box3">
+            <div class="cbox_left sl_3">
+
+            </div>
+            <div class="cbox_right sr_3">
+                <p>
+                    <span class="title">라이트 바닐라 아몬드라떼</span>
+                    <img src="images/bar1.png" style="width: 190px; opacity: 0.5;">
+                    <br />
+                    <span class="text">Light vanilla almond latte</span><br />
+                    비건 음료 아몬드브리즈와 칼로리를 낮춘 라이트 바닐라 시럽이 만나 가볍지만 부드~러워진 라떼
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
