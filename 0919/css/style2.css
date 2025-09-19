@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bigbox {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #eee;
+    margin: 50px auto;
+}
+
+.face {
+    width: 500px;
+    height: 470px;
+    position: absolute;
+    bottom: 0;
+    border: 5px solid #333;
+    background-color: #82d1ff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.eyeball {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #333;
+    position: absolute;
+    top: 180px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.eyeball.left {
+    left: 105px;
+}
+
+.eyeball.right {
+    right: 105px;
+}
+
+.nose {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    position: absolute;
+    bottom: 160px;
+    background-color: #000;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.mouth {
+    width: 80px;
+    height: 70px;
+    border: 5px solid #000;
+    position: absolute;
+    top: 270px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.mouth.left {
+    left: 175px;
+    transform: rotate(135deg);
+}
+
+.mouth.right {
+    right: 175px;
+    transform: rotate(-135deg);
+}
+
+.linebox {
+    position: absolute;
+    top: 260px;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 270px;
+    height: 120px;
+}
+
+.lineleft,
+.lineright {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 120px;
+}
+
+.lineleft {
+    left: 0;
+}
+
+.lineright {
+    right: 0;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 2px;
+    background-color: #333;
+    border: none;
+}
+
+.line1 {
+    top: 30px;
+}
+
+.line2 {
+    top: 45px;
+}
+
+.line3 {
+    top: 60px;
+}
+
+.lineleft .line1 {
+    transform: rotate(20deg);
+    transform-origin: right center;
+}
+
+.lineleft .line3 {
+    transform: rotate(-20deg);
+    transform-origin: right center;
+}
+
+.lineright .line1 {
+    transform: rotate(-20deg);
+    transform-origin: left center;
+}
+
+.lineright .line3 {
+    transform: rotate(20deg);
+    transform-origin: left center;
+}

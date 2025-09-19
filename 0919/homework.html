@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Franchise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #222;
+        }
+
+        .wrap {
+            width: 1440px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2.688em;
+            font-family: "Noto Serif KR", serif;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            overflow: hidden;
+            /* float 해제 */
+            margin-bottom: 40px;
+        }
+
+        .card {
+            float: left;
+            width: 340px;
+            height: 415px;
+            border: 1px solid #333;
+            margin-right: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .card:last-child {
+            margin-right: 0;
+        }
+
+        .card img {
+            width: 97px;
+            height: auto;
+            padding: 10px 0px 25px;
+        }
+
+        .card .num {
+            display: inline-block;
+            background: #003b5a;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            font-size: 16px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 42%;
+        }
+
+        .card h3 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-top: 65px;
+            font-size: 1.250em;
+            color: #003e73;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .desc {
+            margin: 30px 0;
+            font-size: 1.250em;
+            line-height: 1.6;
+            color: #003e73;
+        }
+
+        .btn-wrap {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #003b5a;
+            color: #fff;
+            padding: 18px 10px;
+            text-decoration: none;
+            font-size: 16px;
+            width: 320px;
+        }
+
+        .btn:hover {
+            color: #003b5a;
+            background: #fff;
+            border: 1px solid #003b5a;
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h2 class="title">Franchise</h2>
+        <p class="subtitle">브랜드 창업을 검토하실 때 꼭 필요합니다.</p>
+
+        <div class="cards">
+            <div class="card">
+                <img src="images/franchise_ico1.png" alt="창업설명회">
+                <span class="num">1</span>
+                <h3>창업설명회 & 개별상담</h3>
+                <p>가맹지원서 및 상권조사표 작성</p>
+            </div>
+
+            <div class="card">
+                <img src="images/franchise_ico2.png" alt="타겟 입지">
+                <span class="num">2</span>
+                <h3>타겟 입지</h3>
+                <p>브랜드는 주로 메인상권<br>지역에 개설됩니다.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/franchise_ico3.png" alt="필요 면적">
+                <span class="num">3</span>
+                <h3>필요 면적</h3>
+                <p>브랜드는 지상 1층,<br> 전용면적 최소 50㎡(15PY)/<br>
+                    지상2층, 전용면적 최소 66㎡(20PY)의 공간<br>이 필요합니다.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="images/franchise_ico4.png" alt="창업 가능 지역">
+                <span class="num">4</span>
+                <h3>창업 가능 지역</h3>
+                <p>전국 상권 진행 가능(제주 제외),<br>
+                    상권 상담은 창업문의에 남겨주세요.
+                </p>
+            </div>
+        </div>
+
+        <div class="desc">
+            본사와 가맹점주가 상생할 수 있는<br>
+            지속성 있는 <strong>브랜드의 개발과 경영방침</strong>을 추구합니다.
+        </div>
+
+        <div class="btn-wrap">
+            <a href="#" class="btn">창업설명회 신청 / 문의</a>
+        </div>
+    </div>
+</body>
+
+</html>

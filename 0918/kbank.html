@@ -16,6 +16,11 @@
             list-style: none;
         }
 
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
         .section1 {
             width: 1000px;
             height: 300px;
@@ -36,6 +41,11 @@
 
         .section1 .bigbox li:last-child {
             margin-right: 0;
+        }
+
+        .section1 .bigbox li:hover {
+            box-shadow: 2px 2px 10px #c7c7c7;
+            transition: all 0.5s;
         }
 
         .txt1 span {
@@ -111,6 +121,7 @@
 
         .icons p {
             font-size: 14px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -152,29 +163,37 @@
 
         <div class="icons">
             <ul class="clearfix">
-                <li><span class="ico"><img src="images/icon8.png" alt=""></span>
-                    <p>예금</p>
+                <li><a href=""><span class="ico"><img src="images/icon8.png" alt=""></span>
+                        <p>예금</p>
+                    </a>
                 </li>
-                <li><span class="ico"><img src="images/icon6.png" alt=""></span>
-                    <p>펀드</p>
+                <li><a href=""><span class="ico"><img src="images/icon6.png" alt=""></span>
+                        <p>펀드</p>
+                    </a>
                 </li>
-                <li><span class="ico"><img src="images/icon3.png" alt=""></span>
-                    <p>대출</p>
+                <li><a href=""><span class="ico"><img src="images/icon3.png" alt=""></span>
+                        <p>대출</p>
+                    </a>
                 </li>
-                <li><span class="ico"><img src="images/icon5.png" alt=""></span>
-                    <p>신탁</p>
+                <li><a href=""><span class="ico"><img src="images/icon5.png" alt=""></span>
+                        <p>신탁</p>
+                    </a>
                 </li>
-                <li><span class="ico"><img src="images/icon4.png" alt=""></span>
-                    <p>ISA</p>
+                <li><a href=""><span class="ico"><img src="images/icon4.png" alt=""></span>
+                        <p>ISA</p>
+                    </a>
                 </li>
-                <li><span class="ico"><img src="images/icon7.png" alt=""></span>
-                    <p>보험/공제</p>
+                <li><a href=""><span class="ico"><img src="images/icon7.png" alt=""></span>
+                        <p>보험/공제</p>
+                    </a>
                 </li>
-                <li><span class="ico"><img src="images/icon1.png" alt=""></span>
-                    <p>골드</p>
+                <li><a href=""><span class="ico"><img src="images/icon1.png" alt=""></span>
+                        <p>골드</p>
+                    </a>
                 </li>
-                <li><span class="ico"><img src="images/icon2.png" alt=""></span>
-                    <p>외화예금</p>
+                <li><a href=""><span class="ico"><img src="images/icon2.png" alt=""></span>
+                        <p>외화예금</p>
+                    </a>
                 </li>
             </ul>
         </div>

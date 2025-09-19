@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cf::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .bigbox1 {
+        width: 500px;
+        background-color: pink;
+        padding: 10px;
+        /* overflow: hidden; */
+    }
+
+    .bigbox2 {
+        width: 500px;
+        background-color: rgb(243, 13, 51);
+        padding: 10px;
+        /* overflow: hidden; */
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        float: left;
+    }
+
+    .box1 {
+        background-color: aqua;
+    }
+
+    .box2 {
+        background-color: tan;
+    }
+
+    .box3 {
+        background-color: grey;
+        transform: rotate(45deg0);
+    }
+</style>
+
+<body>
+    <div class="bigbox1 cf">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+    <div class="bigbox2 cf">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+</body>
+
+</html>

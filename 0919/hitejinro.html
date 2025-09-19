@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 1070px;
+            height: 800px;
+            position: relative;
+            border: 1px solid #eee;
+            margin: 50px auto 0;
+        }
+
+        .box {
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .box img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box1 {
+            width: 260px;
+            height: 260px;
+            top: 0;
+            left: 0;
+        }
+
+        .box2 {
+            width: 260px;
+            height: 530px;
+            top: 0;
+            left: 270px;
+        }
+
+        .box3 {
+            width: 260px;
+            height: 260px;
+            top: 0;
+            right: 270px;
+        }
+
+        .box4 {
+            width: 260px;
+            height: 260px;
+            top: 0;
+            right: 0;
+        }
+
+        .box5 {
+            width: 260px;
+            height: 260px;
+            top: 270px;
+            left: 0;
+        }
+
+        .box6 {
+            width: 530px;
+            height: 260px;
+            top: 270px;
+            right: 0;
+        }
+
+        .box7 {
+            width: 260px;
+            height: 260px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box8 {
+            width: 530px;
+            height: 260px;
+            bottom: 0;
+            left: 270px;
+        }
+
+        .box9 {
+            width: 260px;
+            height: 260px;
+            bottom: 0;
+            right: 0;
+        }
+
+        .box::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: all 0.4s;
+        }
+
+        .box:hover:after {
+            width: 100%;
+        }
+
+        .box p,
+        .box a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            opacity: 0;
+            transition: all 0.5s;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .box p {
+            width: 80%;
+            top: 25%;
+            font-size: 16px;
+            line-height: 28px;
+            display: inline-block;
+        }
+
+        .box a {
+            top: 65%;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .box:hover p,
+        .box:hover a {
+            opacity: 1;
+        }
+
+        .box2 p {
+            top: 35%;
+        }
+
+        .box2 a {
+            top: 55%;
+        }
+
+        .box3 p,
+        .box4 p,
+        .box6 p,
+        .box7 p,
+        .box9 p {
+            top: 33%;
+        }
+
+        .box8 p {
+            top: 40%;
+        }
+
+        .box3 a,
+        .box4 a,
+        .box7 a,
+        .box9 a {
+            top: 63%;
+        }
+
+        .box6 a,
+        .box8 a {
+            top: 60%;
+        }
+
+        .box6::after,
+        .box8::after {
+            width: 100%;
+            height: 0%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: height 0.4s;
+        }
+
+        .box6:hover::after,
+        .box8:hover::after {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box box1">
+            <img src="images/01.png" alt="1">
+            <p>
+                국내유일 청정 대나무 숯으로 <br>
+                5번 더 걸러 깨끗해진 <br>
+                참이슬fresh
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box2">
+            <img src="images/02.jpg" alt="2">
+            <p>
+                청정라거 <br>
+                시대개막 <br>
+                TERRA
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box3">
+            <img src="images/03.jpg" alt="3">
+            <p>
+                언론 속 하이트 진로의 <br>
+                다양한소식을 알려드립니다.
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box4">
+            <img src="images/04.png" alt="4">
+            <p>
+                더블속성이 만든 부드러우면서 <br>
+                강렬한 맛의 더블 임팩트 라거!
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box5">
+            <img src="images/05.png" alt="5">
+            <p>
+                하이트진로의 사회 공헌 활동은 <br>
+                모두가 즐겁고 행복한 세상을 <br>
+                만들기 위한 실천입니다.
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box6">
+            <img src="images/06.png" alt="6">
+            <p>
+                대한민국 맥주의 자존심! <br>
+                ALL NEW 하이트
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box7">
+            <img src="images/07.png" alt="7">
+            <p>
+                부드러움의 황금비율 <br>
+                탄생 '진로골드'
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box8">
+            <img src="images/08.png" alt="8">
+            <p>
+                하이트 진로의 최신 광고영상을 소개합니다.
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+        <div class="box box9">
+            <img src="images/09.jpg" alt="9">
+            <p>
+                하이트진로 100주년 기념 <br>
+                역사 박물관입니다.
+            </p>
+            <a href=""><img src="images/more.png" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>

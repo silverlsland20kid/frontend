@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul::before {
+            content: "첫번째";
+        }
+
+        ul::after {
+            content: "마지막";
+        }
+
+        ul li::before {
+            content: "😎";
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>제품소개</li>
+        <li>커뮤니티</li>
+        <li>다운로드</li>
+        <li>회사소개</li>
+    </ul>
+</body>
+
+</html>
