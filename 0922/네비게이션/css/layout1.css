@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bigbox {
+    width: 1000px;
+    border: 5px solid tan;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.bigbox h2 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.bigbox .box {
+    float: left;
+    border: 5px solid lime;
+    margin: 30px 0 0 32px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.bigbox .box img {
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.box:hover img {
+    transform: scale(1.2, 1.2);
+}
+
+.box4 {
+    perspective: 200px;
+}
+
+.box4:hover img {
+    transform: rotateY('360deg')
+}
+
+.box4 img {
+    transform-origin: left center;
+}
+
+.abigbox {
+    width: 1000px;
+    border: 5px solid tan;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+}
+
+.abigbox h2 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.abigbox .abox {
+    float: left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width: 200px;
+    height: 150px;
+    position: relative;
+}
+
+.abox1 {
+    background: url(/0922/img/women1.jpg) no-repeat 50% 50% / 100%;
+    transition: all 0.5s;
+}
+
+.abox1:hover {
+    background: url(/0922/img/women1.jpg) no-repeat 50% 50% / 120%;
+}
+
+.abox2 {
+    overflow: hidden;
+}
+
+.abox2:hover .txt1 {
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.txt1 {
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.abox3 img {
+    transition: all 0.5s;
+}
+
+.abox3:hover img {
+    opacity: 0.7;
+}

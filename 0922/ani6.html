@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myball {
+            position: relative;
+            left: 10px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 1px solid #000;
+            background: url(img/f1.png) no-repeat 50% 50%;
+            animation: myani 3s forwards;
+            /* 애니메이션 끝부분 상태로 종료 */
+        }
+
+        @keyframes myani {
+            0% {
+                left: 10px;
+            }
+
+            100% {
+                left: 500px;
+            }
+        }
+
+        #myball1 {
+            position: relative;
+            left: 10px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 1px solid #000;
+            background: url(img/f1.png) no-repeat 50% 50%;
+            animation: myani1 3s forwards linear;
+            /* 애니메이션 끝부분 상태로 종료 */
+        }
+
+        @keyframes myani1 {
+            0% {
+                left: 10px;
+            }
+
+            100% {
+                left: 500px;
+            }
+        }
+
+        #myball2 {
+            position: relative;
+            left: 10px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 1px solid #000;
+            background: url(img/f1.png) no-repeat 50% 50%;
+            animation: myani2 3s forwards ease-out;
+            /* 애니메이션 끝부분 상태로 종료 */
+        }
+
+        @keyframes myani2 {
+            0% {
+                left: 10px;
+            }
+
+            100% {
+                left: 500px;
+            }
+        }
+
+        #myball3 {
+            position: relative;
+            left: 10px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 1px solid #000;
+            background: url(img/f1.png) no-repeat 50% 50%;
+            animation: myani3 3s forwards ease-in-out;
+            /* 애니메이션 끝부분 상태로 종료 */
+        }
+
+        @keyframes myani3 {
+            0% {
+                left: 10px;
+            }
+
+            100% {
+                left: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myball"></div>
+    <div id="myball1"></div>
+    <div id="myball2"></div>
+    <div id="myball3"></div>
+</body>
+
+</html>
