@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+#container {
+    width: 800px;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background: url(../coffe_images/top2.jpg) no-repeat 100%;
+}
+
+header h1 {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: #fff;
+}
+
+
+nav {
+    height: 60px;
+    background-color: #9b610b;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+nav ul li:hover a {
+    background-color: #fff;
+    width: 160px;
+    line-height: 60px;
+    height: 60px;
+    color: #9b610b;
+    font-weight: bold;
+}
+
+.main {
+    height: 470px;
+}
+
+section {
+    width: 600px;
+    height: 470px;
+    background-color: rgb(133 81 35);
+    float: left;
+}
+
+section h3 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+section article {
+    width: 255px;
+    height: 155px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #333;
+    margin: 0 0 15px 15px;
+    padding: 10px;
+    text-align: justify;
+}
+
+section article h3 {
+    padding-bottom: 10px;
+}
+
+section article p {
+    font-size: 13px;
+}
+
+aside {
+    width: 200px;
+    height: 470px;
+    background-color: #efe0c7;
+    float: left;
+    text-align: center;
+}
+
+aside h3 {
+    padding: 10px 0;
+}
+
+/* aside img {
+    padding-bottom: 10px;
+} */
+
+footer {
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+}
+
+article h4 {
+    background: url(/0923/coffe/coffe_images/kong.png) no-repeat 0% 30%;
+    padding: 0 0 10px 30px;
+}
+
+
+footer {
+    height: 50px;
+    line-height: 50px;
+}
+
+footer p {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
