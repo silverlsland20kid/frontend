@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        .intro {
+            font-size: 20px;
+        }
+
+        h1,
+        h2 {
+            color: tomato;
+        }
+
+        div>ul>li {
+            border: 1px solid #eee;
+        }
+
+        div ul li {
+            color: green;
+        }
+
+        h3+p {
+            color: orange;
+        }
+
+        input[type="text"] {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>문단을 나누는 태그</p>
+    <h1>헤딩 태그</h1>
+    <div class="intro">클래스선택자</div>
+    <div id="header">
+        아이디 선택자 (주로 전체적인 레이아웃을 만들때 씀)
+        하나의 html에 오로지 한개만 존재.중복ㄴㄴ
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">회사소개</a>
+                <ul>
+                    <li><a href="#">sub1</a></li>
+                    <li><a href="#">sub2</a></li>
+                    <li><a href="#">sub3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">회사소개1</a></li>
+            <li><a href="#">회사소개2</a></li>
+            <li><a href="#">회사소개3</a></li>
+        </ul>
+    </div>
+
+    <h3>나말고 밑에 친구 빨간색</h3>
+    <p>내가 오렌지</p>
+</body>
+
+</html>

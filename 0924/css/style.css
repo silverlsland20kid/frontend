@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* pc용 */
+@media screen and (min-width:1024px) {
+
+    #wrapper {
+        width: 900px;
+        margin: auto;
+    }
+
+    header {
+        width: 100%;
+        height: 200px;
+        background-color: #f46075;
+    }
+
+    header h1 {
+        float: left;
+        margin: 70px 0 0 50px;
+        color: #fff;
+    }
+
+    header .logo_p {
+        float: right;
+        margin: 30px 0 0 20px;
+    }
+
+    nav {
+        height: 60px;
+        background-color: #ccc;
+    }
+
+    nav ul li {
+        float: left;
+        margin: 10px 0 0 50px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    nav ul li:hover a {
+        background-color: #f46075;
+        width: 160px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .main {
+        height: 550px;
+    }
+
+    section {
+        width: 650px;
+        height: 550px;
+        background-color: skyblue;
+        float: left;
+    }
+
+    section h2 {
+        text-align: center;
+        padding: 20px 0 40px 0;
+    }
+
+    section article {
+        width: 280px;
+        height: 180px;
+        background-color: #fff;
+        float: left;
+        border: 1px solid #333;
+        margin: 0 0 15px 15px;
+        padding: 10px;
+        text-align: justify;
+    }
+
+    section article h3 {
+        padding-bottom: 10px;
+    }
+
+    section article p {
+        font-size: 13px;
+    }
+
+    aside {
+        width: 250px;
+        height: 550px;
+        background-color: #ffffcc;
+        float: left;
+        text-align: center;
+    }
+
+    aside h2 {
+        padding: 10px 0;
+    }
+
+    aside img {
+        padding-bottom: 10px;
+    }
+
+    footer {
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    article h3 {
+        background: url(/0923/애완견/img/bg.png) no-repeat 0% 30%;
+        padding: 0 0 10px 30px;
+    }
+
+
+}
+
+
+/* 스마트폰용 */
+@media screen and (max-width:600px) {
+    #wrapper {
+        width: 100%;
+        margin: auto;
+    }
+
+    header {
+        height: 120px;
+        background-color: #f46075;
+    }
+
+    header h1 {
+        float: left;
+        margin: 50px 0 0 30px;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    header .logo_p {
+        float: right;
+        margin: 10px 0 0 20px;
+        width: 120px;
+    }
+
+    header .logo_p img {
+        display: block;
+        width: 100%;
+    }
+
+    nav {
+        height: 120px;
+        background-color: #ccc;
+    }
+
+    nav ul li {
+        float: left;
+        width: 50%;
+        height: 60px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin: 10px auto 0;
+
+    }
+
+    nav ul li:hover a {
+        background-color: #f46075;
+        width: 160px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        background-color: skyblue;
+        float: left;
+        padding-bottom: 20px;
+    }
+
+    section h2 {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    section article {
+        width: 80%;
+        height: 160px;
+        background-color: #fff;
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: justify;
+        margin: 0 auto 15px;
+    }
+
+    section article h3 {
+        padding-bottom: 10px;
+    }
+
+    section article p {
+        font-size: 13px;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        background-color: #ffffcc;
+        text-align: center;
+    }
+
+    aside h2 {
+        padding: 10px 0;
+    }
+
+    aside img {
+        padding-bottom: 10px;
+        width: 75%;
+    }
+
+    footer {
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    article h3 {
+        background: url(/0923/애완견/img/bg.png) no-repeat 0% 30%;
+        padding: 0 0 10px 30px;
+    }
+
+}
+
+/* 스마트패드용 */
+@media screen and (min-width:601px) and (max-width:1023px) {
+    #wrapper {
+        width: 600px;
+        margin: auto;
+    }
+
+    header {
+        width: 100%;
+        height: 160px;
+        background-color: #f46075;
+    }
+
+    header h1 {
+        float: left;
+        margin: 50px 0 0 30px;
+        color: #fff;
+    }
+
+    header .logo_p {
+        float: right;
+        margin: 25px 20px 0 20px;
+        width: 160px;
+    }
+
+    header .logo_p img {
+        display: block;
+        width: 100%;
+    }
+
+    nav {
+
+        height: 60px;
+        background-color: #ccc;
+    }
+
+    nav ul li {
+        float: left;
+        margin: 10px 0 0 15px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 127px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    nav ul li:hover a {
+        background-color: #f46075;
+        width: 127px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .main {
+        height: auto;
+    }
+
+    section {
+        width: 100%;
+        height: 550px;
+        background-color: skyblue;
+    }
+
+    section h2 {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    section article {
+        width: 260px;
+        height: 180px;
+        background-color: #fff;
+        float: left;
+        border: 1px solid #333;
+        margin: 0 0 15px 12px;
+        padding: 10px;
+        text-align: justify;
+    }
+
+    section article h3 {
+        padding-bottom: 10px;
+    }
+
+    section article p {
+        font-size: 13px;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        background-color: #ffffcc;
+        text-align: center;
+    }
+
+    aside h2 {
+        padding: 10px 0;
+    }
+
+    aside img {
+        padding-bottom: 10px;
+    }
+
+    footer {
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    article h3 {
+        background: url(/0923/애완견/img/bg.png) no-repeat 0% 30%;
+        padding: 0 0 10px 30px;
+    }
+}
