@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    outline: 0;
+    text-decoration: none;
+    color: #555
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font: 16px "Poiret One", "Hanna", sans-serif;
+    color: #333;
+}
+
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+article .txt p>* {
+    display: block;
+}
+
+/* 레이아웃 */
+header {
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00116d;
+}
+
+nav {
+    position: relative;
+    margin-left: 15%;
+    width: 85%;
+    height: 35px;
+    background-color: #00116d;
+}
+
+section {
+    position: relative;
+    margin-left: 15%;
+    width: 85%;
+}
+
+header .logo {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+}
+
+header .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header .gnb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .gnb a {
+    display: block;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.8;
+    padding: 8px 30px;
+    transition: all 0.4s;
+}
+
+header .gnb a:hover {
+    color: rgb(229, 255, 80);
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+header .bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    width: 50%;
+}
+
+header .bottom .snsSet {
+    margin-bottom: 10px;
+}
+
+header .bottom .snsSet li {
+    float: left;
+    width: 50%;
+    font-size: 0.8em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header .bottom .snsSet li:nth-child(1) {
+    border-right: 1px solid #fff;
+}
+
+header .bottom .snsSet li a {
+    color: #fff;
+}
+
+header .bottom .sns li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+header .bottom .sns li a {
+    color: #fff;
+}
+
+/* 레이아웃 */
+section {
+    width: 85%;
+    margin-left: 15%;
+    height: auto;
+}
+
+section article {
+    float: left;
+    height: 280px;
+    animation: scale 1s;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+article>div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+article .bg {
+    background: no-repeat center / cover;
+}
+
+article .bg span {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    font-size: 30px;
+    color: #666;
+    transform: scale(5);
+    opacity: 0;
+    transition: all 0.6s;
+    font-family: "Bungee", sans-serif;
+}
+
+article .bg span {
+    /* cursor: default; */
+    pointer-events: none;
+}
+
+article .bg:hover span {
+    transform: scale(1);
+    opacity: 1;
+    color: #b8b8b8;
+}
+
+article .bg.bg1 span {
+    font-size: 100px;
+    transform: rotateY(180deg);
+    color: #222;
+}
+
+article .bg.bg1:hover span {
+    transform: rotateY(0deg);
+}
+
+article .bg1 {
+    background-image: url(../images/1.png);
+    background-color: #e5e7f3;
+}
+
+article .bg2 {
+    background-image: url(../images/3.png);
+}
+
+article .bg3 {
+    background-image: url(../images/4.jpg);
+}
+
+article .bg4 {
+    background-image: url(../images/5.jpg);
+}
+
+article .bg5 {
+    background-image: url(../images/6.jpg);
+}
+
+article .bg6 {
+    background-image: url(../images/7.jpg);
+}
+
+article .bg7 {
+    background-image: url(../images/8.png);
+}
+
+
+article .txt {
+    background-color: #fff;
+    transition: all 0.6s;
+}
+
+article .txt.txt1 img {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    top: 20px;
+    right: -300px;
+    opacity: 0.4;
+    transition: all 0.6s;
+}
+
+article .txt p {
+    padding: 30px 40px 0;
+    box-sizing: border-box;
+    font-family: "Hanna", sans-serif;
+    word-break: keep-all;
+    position: relative;
+}
+
+article .txt p strong {
+    font-size: 30px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: all 0.6s;
+    font-family: "Bungee", sans-serif;
+}
+
+article .txt p em {
+    transition: all 0.6s;
+}
+
+article .txt.txt1:hover {
+    background-color: rgb(229, 248, 255);
+    color: #00116d;
+}
+
+article .txt.txt1:hover img {
+    right: 10px;
+}
+
+article .txt.txt2:hover {
+    background-color: rgb(191, 255, 17);
+}
+
+article .txt.txt2:hover i {
+    color: #00116d;
+}
+
+article .txt.txt3:hover {
+    background-color: rgb(166, 12, 255);
+    color: #fff;
+}
+
+article .txt.txt3:hover p strong {
+    color: #fff;
+}
+
+article .txt.txt4:hover {
+    background-color: rgb(32, 236, 226);
+}
+
+article .txt.txt4:hover i {
+    color: rgb(29, 182, 174);
+}
+
+article .txt.txt5:hover {
+    background-color: rgb(255, 75, 30);
+}
+
+article .txt.txt5:hover p strong,
+article .txt.txt5:hover p em,
+article .txt.txt4:hover p strong,
+article .txt.txt4:hover p em {
+    color: #fff;
+}
+
+article .txt:hover i {
+    right: -15px;
+    color: aliceblue;
+}
+
+article .txt i {
+    position: absolute;
+    font-size: 200px;
+    opacity: 0.5;
+    bottom: 0;
+    right: -500px;
+    transition: all 1s;
+}
+
+article .txt.txt2 i {
+    right: 0;
+}
+
+section article:nth-child(1) {
+    width: 60%;
+    height: 560px;
+}
+
+section article:nth-child(2) {
+    width: 40%;
+}
+
+section article:nth-child(3) {
+    width: 20%;
+}
+
+section article:nth-child(4) {
+    width: 20%;
+}
+
+section article:nth-child(5) {
+    width: 20%;
+}
+
+section article:nth-child(6) {
+    width: 40%;
+}
+
+section article:nth-child(7) {
+    width: 20%;
+}
+
+section article:nth-child(8) {
+    width: 20%;
+}
+
+section article:nth-child(9) {
+    width: 40%;
+}
+
+section article:nth-child(10) {
+    width: 20%;
+}
+
+section article:nth-child(11) {
+    width: 20%;
+}
+
+section article:nth-child(12) {
+    width: 20%;
+    background-color: #00116d;
+}
