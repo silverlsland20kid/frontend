@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num1 = 20;
+        var num2 = 10;
+        // 두수를 더한 값은 score1에 저장
+        // 두수를 뺀 값은 score2에 저장
+        // 두수를 곱한 값은 score3에 저장
+        // 두수를 나눈 값은 score4에 저장
+        // 결과를 콘솔로 보여주시긔
+
+        var score1 = num1 + num2;
+        console.log(score1);
+
+        var score2 = num2 - num1;
+        console.log(score2);
+
+        var score3 = num1 * num2;
+        console.log(score3);
+
+        var score4 = num1 / num2;
+        console.log(score4);
+
+        // 짝수 예제
+        var evenOdd = 7;
+        var result = evenOdd % 2;
+        var comment;
+
+        if (result === 0) {
+            comment = evenOdd + "는 짝수이긔";
+        } else {
+            comment = evenOdd + "는 홀수이긔";
+        }
+
+        console.log(comment);
+
+
+        // var a = 0;
+        // a = a + 1; 와 a++ 는 같은공식이긔
+        // a++;
+        // document.write(a);
+
+        var increase = 0;
+        var add = 0;
+        ++increase;
+        document.write(increase + "<br/>");
+
+        // 증감연산자 - 후위증가 => 변수값 출력 후 증가작업시작
+        increase++;
+        document.write(increase + "<br/>");
+        // 증감연산자 - 전위증가 => 증가 작업 후 변수값 출력
+        add = ++increase;
+        document.write(add + "," + increase + "<br/>");
+
+        add = increase++;
+        document.write(add + "," + increase);
+    </script>
+</body>
+
+</html>
