@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var age = prompt("아동 or 청소년 or 성인 중 입력하라긔", "")
+        switch (age) {
+            case "아동":
+                age += " : 입장료 무료";
+                break;
+            case "청소년":
+                age += " : 입장료 2000원"
+                break;
+            case "성인":
+                age += " : 입장료 5000원"
+                break;
+            default:
+                age = "입력을 제대로 해보시긔"
+        }
+        document.write(age);
+    </script>
+</body>
+
+</html>

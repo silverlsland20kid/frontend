@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //프롬프트로 숫자 입력받긔
+        // 봄: 3-5월 / 여름: 6-8월 / 가을: 9-11월 // 겨울: 12,1,2
+
+        var month = prompt("지금은 몇월인지 입력해보라긔 (1월~12월)", "");
+        var season;
+
+        if (month >= 3 && month <= 5) {
+            season = "봄";
+        } else if (month >= 6 && month <= 8) {
+            season = "여름";
+        } else if (month >= 9 && month <= 11) {
+            season = "가을";
+        } else if (month == 12 || month == 1 || month == 2) {
+            season = "겨울";
+        } else {
+            season = "잘못된 입력";
+        }
+
+        document.write("당신이 입력한 월은 <b>" + month + "월</b>이고, 계절은 " + season + "이긔");
+    </script>
+</body>
+
+</html>

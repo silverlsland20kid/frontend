@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // **함수 표현식(Function Expression)**을 사용
+        // 익명 함수(function (a, b) { ... })를 변수 all에 할당. 즉, all은 함수 자체를 가리키는 변수
+        var all = function (a, b) {
+            var result;
+            a > b ? result = 'a' : result = 'b';
+            return result;
+        }
+        console.log(all(7, 10));
+    </script>
+</body>
+
+</html>

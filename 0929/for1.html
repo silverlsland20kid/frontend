@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var sum = 0;
+        //초기, 조건, 증감식
+        // for (var i = 1; i <= 100; i++) {
+        //     document.write(i + "<br/>");
+        //     sum = sum + i;
+        // }
+
+        // document.write("1부터" + i + "까지의 합 : " + sum + "<br/>");
+
+
+        //짝수의 합계를 구하고 싶을땐 초기값: var i = 2; 으로 조건값: i <= 100; 증감식:i + 2 이렇게 설정하면 됌
+        var sum = 0; // 합계 초기화
+
+        for (var i = 2; i <= 100; i += 2) {   // 2씩 증가
+            document.write(i + "<br/>");
+            sum += i;  // sum = sum + i
+        }
+
+        document.write("2부터 100까지의 짝수 합 : " + sum + "<br/>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for문으로 구구단 4단 만들기
+        var i = 4;
+        var sum;
+
+        document.write(i + "단<br/>");
+
+        for (var j = 1; j <= 9; j++) {
+            sum = i * j;  // 계산값을 sum에 저장
+            document.write(i + " X " + j + " = " + sum + "<br/>");
+        }
+
+        // if문으로 성적출력해보기
+        // 0보다 작을경우, 100점보다 클 경우 -> '성적을 입력하세요.'
+        // 99-90 -> 수
+        // 89-80 -> 우
+        // 79-70 -> 미
+        // 69-60 -> 양
+        // 59-50 -> 가
+
+        var avg = prompt("너의 성적을 적어보셈 (0~100점)", "");
+        var hak;
+        if (avg < 0 || avg > 100) {
+            document.write("성적을 자세히 입력해보셈");
+        } else if (avg >= 90) {
+            hak = '수';
+        } else if (avg >= 80) {
+            hak = '우';
+        } else if (avg >= 70) {
+            hak = '미';
+        } else if (avg >= 60) {
+            hak = '양';
+        } else if (avg >= 50) {
+            hak = '가';
+        } else {
+            document.write("공부 좀 더 해보셈");
+        }
+
+        if (hak) { // 학점이 정해졌을 때만 출력
+            document.write("<br/>당신의 학점은 " + hak + " 이긔");
+        }
+    </script>
+</body>
+
+</html>

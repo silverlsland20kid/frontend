@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var first = 13; // 전역 변수
+        var last = 7; // 전역 변수
+        var result = all(first, last); // 인수(Argument): 13, 7
+        console.log(result);
+
+        // 매개변수: 함수를 정의할 때 쓰는 변수명 (a, b).
+        // 인수: 함수를 호출할 때 실제로 전달되는 값 (13, 7).
+        function all(a, b) { // 매개변수(Parameter): a, b
+            var sam = a + b; // 지역 변수(Local): sam
+            return sam;
+        }
+    </script>
+</body>
+
+</html>
