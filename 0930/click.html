@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // showAlert()는 콜백 함수 역할을 함
+    // 내가 직접 showAlert()를 호출하지 않아도, 버튼 클릭이라는 이벤트가 발생하면 브라우저가 대신 호출해 줌
+    function showAlert() {
+        alert("HTML 속성을 통해 함수가 실행되었습니다.");
+    }
+</script>
+
+<body>
+    <button onclick="showAlert()">클릭하여 알림창 보기</button>
+</body>
+
+</html>

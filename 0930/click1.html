@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">클릭하여 콘솔보기</button>
+</body>
+
+</html>
+<script>
+    // #btn 선택해서 변수 btn 할당
+    // btn.onclick = ... → 이벤트 핸들러는 하나만 등록 가능 (나중에 쓴 것이 앞의 것을 덮어씀). 간단한 클릭이벤트에만 사용
+    const btn = document.getElementById('btn');
+    btn.onclick = function () {
+        console.log("첫 번째 실행");
+    }
+
+</script>

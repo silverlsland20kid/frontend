@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var seasons = ["봄", "여름", "가을", "겨울"];
+
+        // for: 인덱스를 직접 컨트롤하며 반복. 시작값/끝값/증가폭을 내가 정함.
+        // for (var i = 0; i < season.length; i++) {
+        //     document.write(season[i] + "<br/>");
+        // }
+
+        // forEach: 배열의 각 요소에 대해 콜백을 실행하는 메서드. 인덱스 제어는 하지 않음.
+        // forEach는 시작 시점의 length를 기준으로 돈다고 이해하면 편함.
+        seasons.forEach(season => {
+            document.write(season + "<br/>");
+        });
+
+        // ind 배열의 인덱스 번호를 호출, 출력하는 방법
+        // season, ind → 매개변수(parameter)
+        // "봄", "여름", "가을", "겨울" + 대응되는 인덱스(0,1,2,3) → 인수(argument)
+        seasons.forEach(function (season, ind) {
+            document.write(`Index ${ind}: ${season} <br/>`);
+        });
+    </script>
+</body>
+
+</html>

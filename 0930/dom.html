@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 선택자 예제</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1 id="title">과일 목록</h1>
+    <ul>
+        <li class="item">사과</li>
+        <li class="item">바나나</li>
+        <li class="item">포도</li>
+        <li class="item">오렌지</li>
+    </ul>
+
+    <script>
+        // 1. id 선택자
+        const title = document.getElementById("title");
+        console.log("id선택자", title.textContent)
+
+        // 2. 클래스 선택자
+        const itemsByClass = document.getElementsByClassName("item");
+        console.log("클래스로 선택");
+        for (let i = 0; i < itemsByClass.length; i++) {
+            console.log(" -", itemsByClass[i].textContent);
+        }
+
+        // 3. 태그선택자
+        const itemsByTag = document.getElementsByTagName("li");
+        console.log("태그로 선택");
+
+        for (let i = 0; i < itemsByTag.length; i++) {
+            console.log(" -", itemsByTag[i].textContent);
+        }
+
+        // 4. querySelector => 조건에 맞는 첫 번째 요소만 반환
+        const firstItem = document.querySelector(".item");
+        console.log("querySelector(첫번째):", firstItem.textContent);
+
+        // 5. querySelectorAll => 조건에 맞는 모든 요소(NodeList) 반환 (forEach문 가용사능) 
+        const itemAll = document.querySelectorAll(".item");
+        console.log("querySelectorAll :");
+        itemAll.forEach(function (el, index) { // forEach 문으로 NodeList의 모든 요소 순회. el → 현재 순회 중인 .item 요소 , index → 현재 순서 (0부터 시작)
+            console.log(index + 1 + ":", el.textContent); // el.textContent → 태그 안의 텍스트 내용을 가져옴
+        });
+    </script>
+</body>
+
+</html>

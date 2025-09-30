@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100px;
+        }
+
+        .tab-buttons {
+            margin-bottom: 10px;
+        }
+
+        .tab-link {
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .tab-link.active {
+            background: blueviolet;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            background: #fff;
+            border-radius: 10px;
+        }
+
+        .tab-content.active {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>탭 메뉴 예제</h2>
+
+    <!-- 탭 버튼 -->
+    <div class="tab-buttons">
+        <button class="tab-link active" data-tab="tab1">🍎 사과</button>
+        <button class="tab-link" data-tab="tab2">🍌 바나나</button>
+        <button class="tab-link" data-tab="tab3">🍇 포도</button>
+    </div>
+
+    <!-- 탭 내용 -->
+    <div id="tab1" class="tab-content active">사과는 빨갛고 달콤합니다.</div>
+    <div id="tab2" class="tab-content">바나나는 노랗고 길쭉합니다.</div>
+    <div id="tab3" class="tab-content">포도는 보라색이고 송이로 열립니다.</div>
+
+    <script>
+        // 모든 탭 버튼과 콘텐츠 선택
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabLinks.forEach(button => {
+            button.addEventListener("click", () => {
+                // 1. 모든 버튼/콘텐츠에서 active 제거
+                tabLinks.forEach(btn => btn.classList.remove("active"));
+                tabContents.forEach(content => content.classList.remove("active"));
+
+                // 2. 클릭한 버튼 활성화
+                button.classList.add("active");
+
+                // 3. 클릭한 버튼의 data-tab 값 읽어서 해당 콘텐츠 활성화
+                const tabId = button.getAttribute("data-tab");
+                const targetContent = document.getElementById(tabId);
+                targetContent.classList.add("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

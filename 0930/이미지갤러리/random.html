@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 랜덤에 7을 곱해서 0.1?? ~ 6.9??까지 나오는데 소수점 버리고 +1을 해줘서 1~7까지 나오게함
+        var imgNum = Math.floor(Math.random() * 7) + 1;
+        // document.write(imgNum);
+
+        // 위의 공식을 응용해서 7개의 이미지가 랜덤으로 출력되도록 함
+        document.write(`<img src="images/img${imgNum}.jpg">`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

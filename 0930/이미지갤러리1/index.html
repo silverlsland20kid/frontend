@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        #wrap {
+            width: 640px;
+            margin: 100px auto 0;
+        }
+
+        #nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #nav li a {
+            display: block;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 2px;
+            box-sizing: border-box;
+        }
+
+        #nav li a img {
+            width: 70px;
+            vertical-align: bottom;
+        }
+
+        #nav li a.active {
+            border: 2px solid #ffca37;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <ul id="nav">
+            <li><a href="images/lop0.jpg" class="active"><img src="images/thumb0.jpg" alt="호랑이0"></a></li>
+            <li><a href="images/lop1.jpg"><img src="images/thumb1.jpg" alt="호랑이1"></a></li>
+            <li><a href="images/lop2.jpg"><img src="images/thumb2.jpg" alt="호랑이2"></a></li>
+            <li><a href="images/lop3.jpg"><img src="images/thumb3.jpg" alt="호랑이3"></a></li>
+            <li><a href="images/lop4.jpg"><img src="images/thumb4.jpg" alt="호랑이4"></a></li>
+            <li><a href="images/lop5.jpg"><img src="images/thumb5.jpg" alt="호랑이5"></a></li>
+            <li><a href="images/lop6.jpg"><img src="images/thumb6.jpg" alt="호랑이6"></a></li>
+            <li><a href="images/lop7.jpg"><img src="images/thumb7.jpg" alt="호랑이7"></a></li>
+        </ul>
+        <div id="window"><img src="images/lop0.jpg" alt=""></div>
+    </div>
+
+    <script>
+        // HTML 안에서 #nav li a 즉, 썸네일 영역 안에 있는 모든 <a> 태그를 찾습니다.
+        const navLinks = document.querySelectorAll("#nav li a");
+
+
+        // NodeList 안에 있는 <a>들을 하나씩 꺼내서(navLink) 순회
+        // forEach => navLink마다 클릭 이벤트 리스너를 등록함
+        navLinks.forEach(function (navLink) {
+
+            // 사용자가 썸네일 <a>를 클릭하면 이 함수 실행
+            navLink.addEventListener("click", function (e) {
+                e.preventDefault(); // a링크 클릭시 이벤트효과 금지
+
+                // 클릭한 썸네일의 href 속성을 읽어옴 (큰 이미지 주소)
+                let img_url = navLink.getAttribute('href');
+                // #window img (메인 이미지 영역)을 찾아서 src 속성을 그 값으로 교체
+                document.querySelector("#window img").setAttribute('src', img_url);
+
+                // 모든 썸네일의 class="active"를 먼저 지우고 현재 클릭한 썸네일(navLink)에만 active를 붙임
+                navLinks.forEach(link => link.classList.remove("active"));
+                navLink.classList.add("active");
+            });
+        });
+
+
+        // **매개변수 / 인수를 정리해보자면...**
+        // 매개변수(parameter): navLink → forEach 콜백 안에서 사용되는 변수 이름
+        // 인수(argument): forEach 가 navLink 에 전달하는 값들 → #nav li a 각각의 <a> 요소
+        // querySelector("#window img") 에서는 "#window img" 가 인수
+    </script>
+</body>
+
+</html>

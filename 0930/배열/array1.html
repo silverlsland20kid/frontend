@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var names = new Array();
+
+        names[0] = "김부";
+        names[1] = "정현";
+        names[2] = "정주";
+        names[3] = "김민";
+        names[4] = "장영";
+        document.write(names[3] + "<br/>")
+
+
+        // days[ ... ] => days는 ["일","월","화","수","목","금","토"] 배열..
+        var days = new Array("일", "월", "화", "수", "목", "금", "토");
+        // 현재 날짜·시간 정보를 가진 Date 객체를 생성
+        var today = new Date();
+
+        // 위의 var today = new Date(); 객체에서 요일 번호(0~6) 만 뽑아냄.
+        // 그리고 days[...] → days 배열에서 해당 인덱스의 문자열을 꺼냄.
+        // yoil → 그 결과값 문자열을 담음.
+        var yoil = days[today.getDay()]; // []는 배열에서 값 꺼내기(인덱스 접근) 역할 => days 배열에서 today.getDay()가 반환한 숫자 위치의 값을 꺼내라
+        document.write(yoil + "요일<br/>");
+
+
+        // 전체 재산의 합 구하기
+        // new Array 생략대신 대괄호로 데이터를 바로 입력 가능
+        var money = [100, 100, 200, 50, 70, 90]
+        var theLen = money.length;
+        var total = 0;
+
+        for (var i = 0; i < theLen; i++) {
+            total = total + money[i];
+        }
+        document.write(total);
+    </script>
+</body>
+
+</html>

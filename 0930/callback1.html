@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function delayMessage() {
+            // 콜백 함수(callback): 어떤 동작이 끝난 뒤 나중에 호출되도록 전달해둔 함수. => “내가 직접 실행하지 않고, 특정 이벤트나 동작이 발생했을 때 불려지는 함수”
+            // 여기서는 function(){ console.log("1초가 지났습니다.") } 가 콜백 함수가 호출된것
+            setTimeout(function () { //setTimeout => 1회만 실행됌
+                console.log("1초가 지났습니다.")
+            }, 1000);
+        }
+        delayMessage();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">클릭하여 콘솔보기</button>
+</body>
+
+</html>
+<script>
+    // #btn 선택해서 변수 btn 할당
+    // btn.addEventListener('click', ...) → 같은 이벤트에 여러 개의 이벤트핸들러                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         등록 가능, 순서대로 모두 실행.
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function () {
+        console.log("첫 번째 실행");
+    });
+    btn.addEventListener('click', function () {
+        console.log("두 번째 실행");
+    })
+
+</script>

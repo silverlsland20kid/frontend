@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var today = new Date();
+        var year = today.getFullYear();   // 년
+        var month = today.getMonth() + 1; // 월 (0부터 시작이라 +1 필요)
+        var date = today.getDate();       // 일
+        var day = today.getDay();         // 요일(0=일, 1=월, ... 6=토)
+
+
+        var yoil;
+        switch (day) {
+            case 0: yoil = "일요일"; break;
+            case 1: yoil = "월요일"; break;
+            case 2: yoil = "화요일"; break;
+            case 3: yoil = "수요일"; break;
+            case 4: yoil = "목요일"; break;
+            case 5: yoil = "금요일"; break;
+            case 6: yoil = "토요일"; break;
+            default: yoil = "에러";
+        }
+
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+
+        document.write(year + "년" + month + "월" + date + "일" + yoil + " " + hour + "시" + min + "분" + sec + "초" + "<br>");
+        document.write(`${year}년 ${month}월 ${date}일 ${yoil} ${hour}시 ${min}분 ${sec}초`)
+
+        //if문으로도 day를 요일로 바꾸기
+        // if (day == 0) {
+        //     yoil = "일요일";
+        // } else if (day == 1) {
+        //     yoil = "월요일";
+        // } else if (day == 2) {
+        //     yoil = "화요일";
+        // } else if (day == 3) {
+        //     yoil = "수요일";
+        // } else if (day == 4) {
+        //     yoil = "목요일";
+        // } else if (day == 5) {
+        //     yoil = "금요일";
+        // } else if (day == 6) {
+        //     yoil = "토요일";
+        // }
+    </script>
+</body>
+
+</html>
