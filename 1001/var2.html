@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 변수(variable): 데이터를 담는 이름 있는 상자
+        // 스코프(scope): 그 상자를 볼 수 있고 사용할 수 있는 범위/영역
+
+        var x = 200;
+        function testVar() {
+            if (true) {
+                var x = 100;
+                console.log("블록내부 : ", x);
+            };
+        }
+        console.log("블록외부 : ", x);
+        testVar();
+    </script>
+</body>
+
+</html>

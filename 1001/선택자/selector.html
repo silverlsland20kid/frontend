@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div id="myDiv">Hello world</div>
+    <div class="myClass">First Div</div>
+    <div class="myClass">Second Div</div>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+
+    <script>
+        const element = document.querySelector('#myDiv');
+        const element1 = document.getElementById('myDiv');
+
+        console.log(element.textContent);
+
+        // .myClass 클래스 중 첫 번째 요소 하나만 반환
+        const elements = document.querySelector(".myClass");
+        // .myClass 클래스를 가진 모든 요소(NodeList) 를 반환. 알아서 배열을 만들어줌.
+        const elements1 = document.querySelectorAll(".myClass");
+        console.log(elements1[0].textContent);
+        console.log(elements1[1].textContent);
+
+        const b = document.querySelectorAll('p');
+        console.log(b[0].textContent);
+        console.log(b[1].textContent);
+    </script>
+</body>
+
+</html>
