@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="fruits">
+        <li>🍎 사과</li>
+        <li>🍌 바나나</li>
+        <li>🍇 포도</li>
+    </ul>
+
+    <script>
+        const first = document.querySelector("#fruits li"); // li 중 첫 번째 요소 하나만 반환
+        console.log(first.nextElementSibling.textContent); // li 현재 요소의 바로 다음 형제 요소를 반환
+
+        const second = first.nextElementSibling;
+        console.log(second.nextElementSibling.textContent);
+        console.log(second.previousElementSibling.textContent); // li 현재 요소의 바로 이전 형제 요소를 반환
+
+
+        const list = document.getElementById('fruits');
+        console.log(list.parentElement.tagName); // parentElement => 부모 요소를 반환, tagName => 해당 요소의 태그 이름을 대문자로 반환
+
+        console.log(list.children.length); // #fruits ul의 li의 갯수를 반환
+        console.log(list.firstElementChild.textContent);
+        console.log(list.lastElementChild.textContent);
+
+    </script>
+</body>
+
+</html>

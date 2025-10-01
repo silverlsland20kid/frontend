@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+        var avg = 0;
+
+        // prompt는 무조건 문자열을 반환 → 숫자로 변환하려고 Number 또는 parseInt 사용
+        // Number는 실수까지 변환, parseInt는 정수만 변환
+
+        // 프롬프트메소드 쓸때 => prompt(message, defaultValue)
+        // message → 사용자에게 보여줄 안내 문구 (질문).
+        // defaultValue → 입력창 안에 미리 채워 넣을 기본값. (선택적 인자, 안 써도 됨) => 뒤에 ""를 쓴 건 기본값을 "아무 것도 없는 상태"로 주겠다는 의미
+        var kor = Number(prompt("당신의 국어 점수는?", ""));
+        var mat = Number(prompt("당신의 수학 점수는?", ""));
+        var eng = parseInt(prompt("당신의 영어 점수는?", ""));
+
+        var sum = kor + mat + eng;
+        var avg = sum / 3;
+
+        console.log(avg);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fade.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="slider-container">
+        <div class="slider">
+            <div class="slide fade">
+                <img src="images/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="images/slide2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="images/slide3.jpg" alt="Slide 3">
+            </div>
+        </div>
+        <div class="pager">
+            <!-- span은 대표적인 인라인 요소 -->
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <script>
+        // 현재 슬라이드 번호를 저장하는 변수 (1번부터 시작)
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function showSlides(a) {
+
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+
+            // 만약 전달된 인덱스 a가 총 슬라이드 수보다 크면 다시 첫 번째로 설정
+            if (a > slides.length) {
+                slideIndex = 1;
+            }
+
+            // 모든 슬라이드 & 도트 초기화
+            slides.forEach(slide => slide.classList.remove('on'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // 현재 인덱스에 해당하는 슬라이드와 도트만 활성화
+            slides[slideIndex - 1].classList.add('on');
+            dots[slideIndex - 1].classList.add('active');
+        }
+
+        // 특정 슬라이드로 이동하는 함수 (도트 클릭 시 사용)
+        // 매개변수 a: 이동할 슬라이드 번호
+        function currentSlide(a) {
+            showSlides(slideIndex = a);
+        }
+
+        // 슬라이드를 이동하는 함수 (이전/다음 버튼이나 자동재생 시 사용)
+        // 매개변수 a: +1(다음), -1(이전)
+        // 현재 슬라이드 번호를 한 칸 앞/뒤로 이동시켜 주는 역할. 산술연산자 아님
+        function plusSlides(a) {
+            showSlides(slideIndex += a);
+        };
+
+        setInterval(function () {
+            plusSlides(1)
+        }, 3000);
+    </script>
+</body>
+
+</html>

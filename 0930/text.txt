@@ -1,0 +1,8 @@
+
+1. getdate 포함한 get메소드 내장함수 모음 
+2. 수학함수 Math객체 메소드 모음 
+3. 기본함수 , 함수표현식(익명함수), 화살표함수, setTimeout, setInterval 설명 
+4. click 종류 (온클릭, 에드이벤트리스너) 설명 
+5. getAttribute Dom 속성 메소드 모음 
+6. array 배열 설명 
+7. classList.add/ classList.remove/contains 설명
