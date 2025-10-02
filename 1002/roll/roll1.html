@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 80px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #banner_wrap {
+            width: 260px;
+            height: 120px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: 1px solid #aaa;
+        }
+
+        #banner {
+            width: 800px;
+            height: 54px;
+            border: 1px solid red;
+        }
+
+        #frame {
+            width: 232px;
+            height: 54px;
+            position: relative;
+            margin: 10px auto;
+            border: 1px solid blue;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>롤링 슬라이더 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_t1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t5.jpg" alt=""></a></li>
+                <!-- <li><a href="#"><img src="images/pic_t1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt=""></a></li> -->
+            </ul>
+        </div>
+        <p>
+            <a class="prev" href="#"><img src="images/prev_btn.png" alt=""></a>
+            <a class="next" href="#"><img src="images/next_btn.png" alt=""></a>
+        </p>
+    </div>
+
+
+    <script>
+        let list = document.getElementById('banner');
+        let listLi = document.querySelectorAll('#banner li');
+        let total = listLi.length;
+        // offsetWidth: 요소의 실제 너비(px) 반환 => li 하나의 가로 크기를 음수값으로 저장 → 왼쪽으로 이동시키기 위함
+        let li_width = -listLi[0].offsetWidth;
+
+
+        // 앞에 있는 3개 li를 복제해서 ul 뒤에 붙여 무한롤링처럼 보이도록 처리
+        // cloneNode(true): 노드와 자식노드까지 깊은 복사
+        // append(): 선택한 부모 노드의 마지막 자식으로 추가
+        for (let i = 0; i < 3; i++) {
+            let copyObj = listLi[i].cloneNode(true);
+            list.append(copyObj); // ul 맨뒤에 copyObj를 추가
+        }
+        let num = 0;
+
+        // next 버튼 클릭 이벤트
+        document.querySelector('.next').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 마지막 번호까지 갔을 때 초기화
+            if (num === total) {
+                num = 0;
+                list.style.transition = 'none'; // 트랜지션 제거
+                list.style.marginLeft = 0;  // 맨 앞으로 이동
+            };
+
+            // 약간 지연 후 애니메이션 실행
+            setTimeout(function () {
+                num++;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = li_width * num + 'px';
+            }, 50)
+
+
+        })
+
+        // Prev 버튼
+        document.querySelector('.prev').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 첫 슬라이드에서 prev 누르면 → 마지막 복제 지점으로 점프
+            if (num === 0) {
+                num = total;
+                list.style.transition = 'none';
+                list.style.marginLeft = li_width * num + 'px';
+            }
+
+            setTimeout(function () {
+                num--;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = li_width * num + 'px';
+            }, 50);
+        });
+
+
+        //자동재생
+        function autoPlay() {
+            if (num === total) {
+                num = 0;
+                list.style.transition = 'none'; // 트랜지션 제거
+                list.style.marginLeft = 0;  // 맨 앞으로 이동
+            };
+
+            setTimeout(function () {
+                num++;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = li_width * num + 'px';
+            }, 50);
+        }
+        setInterval(autoPlay, 3000);
+
+        let frame = document.getElementById('frame');
+        let interVal = setInterval(autoPlay, 3000);
+
+        // 마우스 올렸을 때 자동재생 정지
+        frame.addEventListener('mouseover', function () {
+            clearInterval(interVal);
+        });
+        // 마우스를 뗐을 때 다시 자동재생
+        frame.addEventListener('mouseout', function () {
+            clearInterval(interVal);
+        });
+    </script>
+</body>
+
+</html>

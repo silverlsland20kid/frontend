@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #cat-container {
+            position: relative;
+        }
+
+        #cat {
+            width: 100px;
+            position: absolute;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cat-container">
+        <img src="images/1.png" alt="" id="cat">
+    </div>
+
+
+    <script>
+        let cat = document.getElementById('cat');
+        let currentX = 0;
+        let currentY = 0;
+
+        // keydown => 키보드를 눌렀을 때 실행
+        document.addEventListener('keydown', function (e) {
+            movecat(e.key); // 눌린 키(e.key)를 movecat 함수에 전달 
+        });
+
+        function movecat(e) {
+            const step = 20; // 한 번 누를 때마다 이동할 거리(px)
+            switch (e) {
+                case 'ArrowUp': // 위 화살표
+                    currentY -= step;
+                    break;
+                case 'ArrowDown': // 아래 화살표
+                    currentY += step;
+                    break;
+                case 'ArrowLeft': // 왼쪽 화살표
+                    currentX -= step;
+                    break;
+                case 'ArrowRight': // 오른쪽 화살표
+                    currentX += step;
+                    break;
+
+                default:
+                    break;
+            }
+            // 누적된 값으로 이동 (translateX, translateY 동시에 적용)
+            cat.style.transform = `translate(${currentX}px,${currentY}px) `;
+        };
+    </script>
+</body>
+
+</html>

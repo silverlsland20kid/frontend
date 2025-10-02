@@ -9,14 +9,19 @@
 
 <body>
     <script>
+        // 전역 변수 선언 (함수 밖에서 선언했기 때문에 어디서든 접근 가능)
         var x = 200;
         function testVar() {
             if (true) {
+                // let은 블록 범위(scope)를 가지므로 if 블록 안에서만 유효
                 let y = 200;
+
+                // const는 상수로, 블록 범위를 가지며 재할당 불가
                 const z = 300;
                 console.log("블록내부 : ", y);
                 console.log("블록내부 : ", z);
             };
+            // 여기서는 y와 z가 블록 밖이므로 접근 불가 → ReferenceError 발생
             console.log("블록외부 : ", y);
             console.log("블록외부 : ", z);
         }

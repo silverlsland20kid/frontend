@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            margin: 50px auto 0;
+        }
+
+        ul li {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ul li 여러개 이미지 hover replace</h2>
+    <ul>
+        <li><img src="images/menu01_out.png" alt="" class="hoverImg"></li>
+        <li><img src="images/menu02_out.png" alt="" class="hoverImg"></li>
+        <li><img src="images/menu03_out.png" alt="" class="hoverImg"></li>
+        <li><img src="images/menu04_out.png" alt="" class="hoverImg"></li>
+    </ul>
+
+
+    <script>
+        const imgs = document.querySelectorAll(".hoverImg");
+
+        imgs.forEach(img => {
+            img.addEventListener("mouseover", function () {
+                // 이미지 src를 "_" 기준으로 분리 (예: "images/pic_out.png" → ["images/pic", "out.png"])
+                let part = this.src.split('_');
+                this.src = part[0] + "_over.png"
+            });
+
+            img.addEventListener("mouseout", function () {
+                let part = this.src.split('_');
+                this.src = part[0] + "_out.png"
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 1200px;
+        }
+
+        #frame {
+            position: relative;
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #banner {
+            width: 4800px;
+            height: 300px;
+        }
+
+        #frame p a {
+            width: 38px;
+            height: 36px;
+            position: absolute;
+            top: 40%;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="frame">
+        <ul id="banner">
+            <li><a href="#"><img src="../1002/roll/images/slide1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../1002/roll/images/slide2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../1002/roll/images/slide3.jpg" alt=""></a></li>
+        </ul>
+        <p>
+            <a class="prev" href="#"><img src="../1002/roll/images/prev_btn.png" alt=""></a>
+            <a class="next" href="#"><img src="../1002/roll/images/next_btn.png" alt=""></a>
+        </p>
+    </div>
+
+
+    <script>
+        let list = document.getElementById('banner');              // ul#banner 가져오기
+        let listLi = document.querySelectorAll('#banner li');      // ul 안의 li 모두 선택
+        let total = listLi.length;                                 // li 총 개수
+        let li_width = -listLi[0].offsetWidth;                     // li의 가로폭(px)을 음수로 → margin-left 이동에 사용
+        let num = 0;                                               // 현재 인덱스 (0부터 시작)
+
+
+        // Next 버튼
+        document.querySelector('.next').addEventListener('click', function (e) {
+            e.preventDefault(); // a 태그 기본 동작 방지
+
+            // 마지막 슬라이드까지 간 경우 → 처음으로 초기화
+            if (num === total) {
+                num = 0;
+                list.style.transition = 'none'; // 트랜지션 제거 (순간 이동)
+                list.style.marginLeft = 0;      // 맨 처음 위치로 이동
+            };
+
+            // 다음 슬라이드로 이동 (트랜지션 복원)
+            setTimeout(function () {
+                num++;
+                list.style.transition = 'margin-left 0.5s'; // 부드럽게 이동
+                list.style.marginLeft = li_width * num + 'px';
+            }, 50);
+        });
+
+        // Prev 버튼
+        document.querySelector('.prev').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 첫 번째 슬라이드에서 Prev 누르면 → 마지막 슬라이드 위치로 이동
+            if (num === 0) {
+                num = total;
+                list.style.transition = 'none';
+                list.style.marginLeft = li_width * num + 'px';
+            }
+
+            // 이전 슬라이드로 이동
+            setTimeout(function () {
+                num--;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = li_width * num + 'px';
+            }, 50);
+        });
+
+        // 자동재생 
+        function autoPlay() {
+            if (num === total) {
+                num = 0;
+                list.style.transition = 'none';
+                list.style.marginLeft = 0;
+            };
+
+            setTimeout(function () {
+                num++;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = li_width * num + 'px';
+            }, 50);
+        }
+
+        // setInterval(): 일정 시간마다 함수 실행
+        setInterval(autoPlay, 3000);
+
+    </script>
+
+
+</body>
+
+</html>
