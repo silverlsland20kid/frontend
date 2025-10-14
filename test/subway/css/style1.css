@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    color: #74767a;
+    line-height: 120%;
+}
+
+a {
+    color: #74767a;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+#wrap {
+    height: 440px;
+    position: relative;
+    min-width: 1000px;
+    padding-top: 165px;
+}
+
+#header {
+    border-top: 5px solid #009223;
+    height: 165px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    overflow: hidden;
+    min-width: 1000px;
+}
+
+#header .logo {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translateX(-50%);
+}
+
+#header .logo a {
+    display: block;
+    background: url(../img/logo_w.png) 0 0 no-repeat;
+    width: 202px;
+    height: 40px;
+    overflow: hidden;
+    font-size: 0px;
+    line-height: 0px;
+    text-indent: -9999px;
+    margin-right: 7rem;
+}
+
+#gnb {
+    position: absolute;
+    left: 0;
+    top: 98px;
+    width: 100%;
+    text-align: center;
+}
+
+#gnb>ul {
+    display: inline-block;
+}
+
+#gnb>ul>li {
+    position: relative;
+    float: left;
+    width: 165px;
+}
+
+#gnb>ul>li>a {
+    display: block;
+    padding-top: 20px;
+    font-size: 18px;
+    color: #292929;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+    transition: color .2s;
+}
+
+#gnb>ul>li>a:hover,
+#gnb>ul>li>a:focus {
+    color: #009223;
+}
+
+/* float 해제 */
+#gnb>ul::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#brandVisual {
+    position: relative;
+    width: 100%;
+    min-width: 1000px;
+    height: 440px;
+    overflow: hidden;
+}
+
+#brandVisual ul li {
+    position: absolute;
+    width: 100%;
+    height: 440px;
+}
+
+#brandVisual .visual_0 {
+    background: url(../img/s1.jpg) center/cover no-repeat;
+}
+
+#brandVisual .visual_1 {
+    background: url(../img/s2.jpg) center/cover no-repeat;
+}
+
+#brandVisual .visual_2 {
+    background: url(../img/s3.jpg) center/cover no-repeat;
+}
+
+#brandVisual .visual_3 {
+    background: url(../img/s4.jpg) center/cover no-repeat;
+}
+
+#buttonList {
+    position: absolute;
+    bottom: 9%;
+    right: 21%;
+    display: flex;
+}
+
+#buttonList li {
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+    margin: 0 5px;
+    background-color: #fff;
+}
+
+#buttonList li.on {
+    width: 30px;
+    background-color: gold;
+}
+
+#buttonList li a {
+    display: block;
+    text-indent: -9999px;
+}
+
+.box {
+    overflow: hidden;
+    position: absolute;
+    right: 21%;
+    bottom: -5%;
+    text-align: right;
+    z-index: 5;
+    display: flex;
+}
+
+.box .store {
+    background-color: #ffce32;
+    border-radius: 30px 0 0 0;
+    transition-duration: 0.2s;
+    letter-spacing: -0.02em;
+}
+
+.box .store a>strong::before {
+    background: url(../img/icon_map.png) 0 0 no-repeat;
+    width: 24px;
+    height: 30px;
+}
+
+.box a>strong::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 13px;
+    position: relative;
+    top: -2px;
+}
+
+.box .franchise a>strong::before {
+    background: url(../img/icon_franchise.png) 0 0 no-repeat;
+    width: 34px;
+    height: 30px;
+}
+
+.box .franchise {
+    background-color: #009223;
+    border-radius: 0 0 30px 0;
+    letter-spacing: -0.05em;
+}
+
+.box a>strong {
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 25px 26px 23px 30px;
+    line-height: 22px;
+}
+
+.box .franchise a>strong {
+    color: #fff;
+    padding-right: 4rem;
+    padding-left: 3rem;
+
+}
+
+.box .store a>strong {
+    color: #333;
+    padding-left: 5rem;
+    padding-right: 4rem;
+}
