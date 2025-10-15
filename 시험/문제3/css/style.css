@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+dl {
+    width: 800px;
+    margin: 70px auto 0;
+}
+
+dt {
+    line-height: 35px;
+    font-size: 16px;
+    padding-left: 50px;
+    font-weight: bold;
+    color: #fff;
+    height: 35px;
+    background: url(../images/a1.jpg) no-repeat 0 0;
+}
+
+dt.over {
+    background: url(../images/a2.jpg) no-repeat 0 0;
+    cursor: pointer;
+}
+
+dt.selected {
+    background: url(../images/a3.jpg) no-repeat 0 0;
+    cursor: pointer;
+}
+
+
+dd {
+    margin: 0;
+    height: 320px;
+    background-color: #cbcbcb;
+}
+
+dd p {
+    padding: 25px;
+}
