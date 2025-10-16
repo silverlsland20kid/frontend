@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kakao 지도 테스트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        #map {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+
+    <!-- ① autoload=false 옵션 추가 -->
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7c9697ebe202454a0b4aa3a2b4edd800"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <!-- ② SDK가 로드된 이후에 실행 -->
+    <script>
+        kakao.maps.load(function () {
+            const container = document.getElementById('map');
+            const options = {
+                center: new kakao.maps.LatLng(37.485856, 126.897438),
+                level: 3
+            };
+            const map = new kakao.maps.Map(container, options);
+        });
+    </script>
+</body>
+
+</html>
