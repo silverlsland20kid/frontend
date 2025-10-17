@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API Example</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+    <h1>weather api</h1>
+    <h2>| 날씨예보</h2>
+    <div class="ctemp">현재 온도: </div>
+    <div class="clowtemp">최저 온도: </div>
+    <div class="chightemp">최고 온도: </div>
+    <!-- <div class="cicon">아이콘 :</div> -->
+
+    <script>
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=549152ded3776628fb05dad54973b359&units=metric", function (result) {
+            let $ctemp = result.main.temp;
+            let $maintemp = result.main.temp_min;
+            let $maxtemp = result.main.temp_max;
+            let $cicon = result.weather.icon;
+
+            let $now = new Date();
+            let $cDate = `${$now.getFullYear()}-${$now.getMonth() + 1}-${$now.getDate()} / ${$now.getHours()}:${$now.getMinutes()}`;
+
+            $('.ctemp').append($ctemp);
+            $('.clowtemp').append($maintemp);
+            $('.chightemp').append($maxtemp);
+            $('h2').append(" - " + $cDate);
+        });
+    </script>
+</body>
+
+</html>

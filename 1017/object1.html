@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: "홍길동",
+            age: 25,
+            job: "개발자",
+            sayHello: function () {
+                console.log("안녕하세요, 저는" + this.name + "입니다.")
+            }
+        };
+        console.log(person.name);
+        console.log(person.age);
+        person.sayHello(); //person 객체 안의 sayHello 함수를 실행
+
+    </script>
+</body>
+
+</html>
