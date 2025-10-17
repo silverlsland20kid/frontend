@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = [
+            { name: "홍길동", age: 25 },
+            { name: "이몽룡", age: 20 },
+            { name: "성춘향", age: 22 },
+        ];
+
+        const names = users.map((user) => user.name);
+        console.log(names);
+
+        const newUser = users.map((user) => ({
+            ...user, // 기존의 user를 부르는 명령어
+            age: user.age + 1 // user의 객체들 중에 나이를 +1 씩 추가한 값을 새 변수로 저장
+        }));
+        console.log(newUser);
+    </script>
+</body>
+
+</html>

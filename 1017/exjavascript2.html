@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>리액트에서 사용하는 자바스크립트 1</h1>
+    <div id="count">0</div>
+    <button id="btn">+1증가</button>
+    <button id="mbtn">-1감소</button>
+
+    <script>
+        let count = 0;
+
+        const countDisplay = document.getElementById("count");
+        const btn = document.getElementById("btn");
+        const mbtn = document.getElementById("mbtn");
+
+        btn.addEventListener("click", () => {
+            count++;
+            countDisplay.textContent = count;
+        });
+
+        mbtn.addEventListener("click", () => {
+            count--;
+            countDisplay.textContent = count;
+        });
+
+
+        var a = 1;
+        b = 2;
+        result = a + b;
+        document.write(result);
+    </script>
+</body>
+
+</html>
