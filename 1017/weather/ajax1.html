@@ -31,7 +31,17 @@
                 '13': 'fas fa-snowflake',
                 '50': 'fas fa-smong',
             }
-        })
+
+            let apiURI = "https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=549152ded3776628fb05dad54973b359&units=metric";
+
+            $.ajax({
+                url: apiURI,
+                dataType: "json", // dataType을 알아서 json으로 변경해줌
+                type: "GET",
+                async: false, // 동기식 (차례대로  데이터 받음 -> 권장하는 방식은 아님)
+
+            });
+        });
     </script>
 </body>
 
