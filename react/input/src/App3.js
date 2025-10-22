@@ -60,31 +60,38 @@ export default function App() {
     };
 
     const onRemove = id => {
-      // filter => 배열에서 특정 조건을 만족하지 않는(=원하지 않는) 요소를 제거하고, 나머지만 남기기
-      setUsers(users.filter(user => user.id !== id)) // 클릭한 id만 제외한 새 배열을 만들어 교체. 화살표 함수가 바로 filter()의 콜백 함수임.
+      setUsers(users.filter(user => user.id !== id))
     }
 
-    
+    // id 값을 비교해서 id 가 다르다면 그대로 두고, 같다면 active 값을 반전시킴
     const onToggle = id => {
       // 1. setUsers를 호출해서 users 상태 업데이트 ㄱㄱ, 기존의 user배열 순회하면서 새로운 배열 생성
       setUsers(users.map(user => 
         // 2. 현재 순회중인 user.id가 전달받은 id가 일치하는지 확인하긔
-          user.id === id ? {...user, active : !user.active} : user // id 값을 비교해서 id 가 다르다면 그대로 두고, 같다면 active 값을 반전시킴
+          user.id === id ? {...user, active : !user.active} : user // active : !user.active => active 값을 반대로 뒤집기
         )
       )
     }
-
+    // id값이 일치하면 (0)값이 나옴. 후에 해당 user 객체의 active속성만 토글하여 새로운 객체를 생성시킴
+    // id값이 일치하지 않으면 (x)값이 나옴. 해당 user 객체는 그대로 반환시킴
+      const [visible, setVisible] = useState(true);
 
   return (
     <div>
+        <button onClick={() => setVisible(!visible)}>
+        {visible ? 'UserList 숨기기' : 'UserList 보이기'}
+      </button>
+      
       <CreateUser 
         username={username}
         email={email}
         onChange={onChange}
         onCreate={onCreate}
       />
-
-       <UserList2 users={users} onRemove={onRemove} onToggle={onToggle}/> {/*사용자 목록을 props로 전달 */}
+        {visible && (
+        <UserList2 users={users} onRemove={onRemove} onToggle={onToggle} />
+      )}
+      {/* <UserList2 users={users} onRemove={onRemove} onToggle={onToggle}/> 사용자 목록을 props로 전달 */}
     </div>
   );
 };

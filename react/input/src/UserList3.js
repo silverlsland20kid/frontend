@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import User from './User'
 
 
 // props로 전달받은 users 배열을 순회(map)하여
 // 각 사용자 정보를 User 컴포넌트에 전달하는 역할
 export default function UserList2({users, onRemove, onToggle}) {
+
+  useEffect(() => {
+    console.log('컴포넌트가 화면에 나타남');
+    return() => {
+      console.log('컴포넌트가 화면에 사라짐');
+    } //소멸
+  },[]);
 
   return (
     <div>
