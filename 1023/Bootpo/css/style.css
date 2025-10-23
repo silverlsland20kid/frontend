@@ -1,0 +1,124 @@
+.ml-1 {
+    margin-left: 1rem;
+}
+
+.px-5 {
+    padding: 0 5rem;
+}
+
+.fa-heartbeat {
+    font-size: 25px;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.navbar {
+    background-color: #b7becf;
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:active {
+    background-color: #fff;
+    color: #333;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+.login {
+    border: 1px solid #eee;
+    color: #333;
+}
+
+.login:hover {
+    background-color: #b7becf;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.started {
+    background-color: #eee;
+    color: grey;
+}
+
+.started:hover {
+    border: 1px solid #eee;
+}
+
+.graph {
+    color: #b7becf !important;
+    font-size: 160px !important;
+}
+
+.logo-small {
+    font-size: 60px;
+    color: #606777 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent;
+    background-size: 100% 100%;
+    width: 2rem;
+    height: 2rem;
+    /* 흰색 화살표 SVG에 색상 필터 적용 */
+    filter: invert(36%) sepia(85%) saturate(2216%) hue-rotate(204deg) brightness(95%) contrast(102%);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #333;
+    /* 짙은 회색 (원하는 색으로 변경 가능) */
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+    /* 활성 슬라이드 색상 (더 진한 색) */
+}
+
+.my-btn {
+    background-color: #b7becf;
+    color: white;
+}
+
+.my-btn:hover {
+    background-color: #fff;
+    color: #b7becf;
+    border: 1px solid #b7becf;
+}
+
+.card-header {
+    background-color: #b7becf;
+    color: white;
+}
+
+.card {
+    border: 1px solid #b7becf;
+}
+
+.slidenim {
+    visibility: hidden;
+}
+
+.slide {
+    animation: slide 1s;
+    visibility: visible;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
