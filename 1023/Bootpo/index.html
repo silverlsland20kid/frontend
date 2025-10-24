@@ -44,10 +44,15 @@
         <!-- p padding Y-axis   패딩 위아래 5px 
         p-1 4px p-2 8px p-3 16px p-4  24px p-5 48px -->
         <div class="container-fluid">
-            <h1 class="display-4">Company</h1>
-            <p class="lead">We specialize in blablabla</p>
-
-
+            <p class="lead">
+                Describe what makes your <br />
+                company unique
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
+                sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
         </div>
     </div>
 
@@ -72,19 +77,92 @@
                 <img src="./image/bg1.jpg" alt="">
             </div>
         </div>
-
     </div>
 
     <!-- Services Section -->
-    <div id="service" class="container-fluid text-left py-5">
-        <h4 class="mb-4">Tag line</h4>
-        <h1 class="mb-4"><b>About [Company Name]</b></h1><br>
+    <div id="portfolioCarousel" class="carousel slide portfolio-peek px-5" data-bs-ride="carousel"
+        data-bs-interval="4000">
+        <h4 class="mb-2">Tagline</h4>
+        <h1 class="mb-1"><b>Introduce your team</b></h1>
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row justify-content-center gy-4 py-3 pb-5">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="team-avatar mb-3"></div>
+                                <h5 class="mb-1">Full name</h5>
+                                <div class="text-muted mb-2">Job title</div>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    varius enim in eros elementum tristique.</p>
+                                <div class="d-flex gap-3">
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-times"></i>
+                                    <i class="fa fa-dribbble"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-md-4">
+                        <div class="card shadow-sm ">
+                            <div class="card-body">
+                                <div class="team-avatar mb-3"></div>
+                                <h5 class="mb-1">Full name</h5>
+                                <div class="text-muted mb-2">Job title</div>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    varius enim in eros elementum tristique.</p>
+                                <div class="d-flex gap-3">
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-times"></i>
+                                    <i class="fa fa-dribbble"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow-sm ">
+                            <div class="card-body">
+                                <div class="team-avatar mb-3"></div>
+                                <h5 class="mb-1">Full name</h5>
+                                <div class="text-muted mb-2">Job title</div>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    varius enim in eros elementum tristique.</p>
+                                <div class="d-flex gap-3">
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-times"></i>
+                                    <i class="fa fa-dribbble"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 나머지 슬라이드는 JS가 자동 생성합니다 -->
+        </div>
+
+        <!-- 좌우 버튼 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Prev</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- 페이저(점) — JS가 개수에 맞춰 생성 -->
+        <div class="carousel-indicators"></div>
     </div>
+
+
 
     <section class="container py-5 text-center">
         <h2 class="mb-1">What our customers say</h2>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="container-fluid align-item-center py-3">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -276,6 +354,8 @@
 
             });
         });
+
+
     </script>
 </body>
 

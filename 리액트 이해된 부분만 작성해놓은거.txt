@@ -4,7 +4,7 @@
   // state — 현재 상태값을 저장하는 변수
   // setState() — 그 값을 변경하는 전용 함수
 
-
+참조(ref) => 돔 선택하는 기능 가능함
 Hook은 React의 “내장 함수”로, 함수형 컴포넌트에서도 상태(state)·생명주기(lifecycle)·참조(ref) 등을 사용할 수 있게 해주는 도구
 “함수형 컴포넌트 내부에서만” 호출할 수 있음
 
@@ -34,8 +34,6 @@ Hook은 React의 “내장 함수”로, 함수형 컴포넌트에서도 상태(
 
 
 
-
-
 slice()메서드는 원본을 수정하지 않고 배열이나 문자열의 일부를 추출하여 새 배열이나 문자열로 반환하는 데 사용
 → 만약 products 배열이 다음과 같다고 해볼게요:
 
@@ -52,3 +50,17 @@ const products = [
 ]
 즉 첫 번째 상품(메인 상품) 은 제외하고,
 그 다음 상품들(사이드 상품) 만 화면에 렌더링합니다.
+
+
+ Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+const onChangeSearch = (e) => {
+    setsearch(e.target.value);
+  }
+함수 실행 시 매개변수로e값 넣어줌 e.target.value => 키보드나 마우스 이벤트
+
+key값 id는 무조건 입력해야함
+
+
+

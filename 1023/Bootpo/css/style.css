@@ -32,6 +32,13 @@
     margin-top: 3rem;
 }
 
+.lead {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
 .login {
     border: 1px solid #eee;
     color: #333;
@@ -121,4 +128,44 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.team-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #e9ecef url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="%2399a">IMG</text></svg>') center/contain no-repeat;
+}
+
+/* [type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    width: 30px;
+    height: 30px;
+} */
+
+
+.carousel-control-next-icon {
+    position: absolute;
+    right: 3rem;
+}
+
+.carousel-control-prev-icon {
+    position: absolute;
+    left: 85rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    bottom: 0;
+    top: auto;
+}
+
+.portfolio-peek {
+    padding: 0 3rem;
+}
+
+.portfolio-peek .carousel-inner {
+    overflow: visible;
 }
