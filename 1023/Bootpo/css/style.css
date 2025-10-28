@@ -69,15 +69,6 @@
     color: #606777 !important;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: transparent;
-    background-size: 100% 100%;
-    width: 2rem;
-    height: 2rem;
-    /* 흰색 화살표 SVG에 색상 필터 적용 */
-    filter: invert(36%) sepia(85%) saturate(2216%) hue-rotate(204deg) brightness(95%) contrast(102%);
-}
 
 .carousel-indicators [data-bs-target] {
     background-color: #333;
@@ -98,11 +89,6 @@
     background-color: #fff;
     color: #b7becf;
     border: 1px solid #b7becf;
-}
-
-.card-header {
-    background-color: #b7becf;
-    color: white;
 }
 
 .card {
@@ -137,29 +123,33 @@
     background: #e9ecef url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="%2399a">IMG</text></svg>') center/contain no-repeat;
 }
 
-/* [type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled),
-button:not(:disabled) {
-    width: 30px;
-    height: 30px;
-} */
-
-
-.carousel-control-next-icon {
-    position: absolute;
-    right: 3rem;
+.carousel-controls {
+    right: 3rem !important;
+    bottom: -2rem !important;
 }
 
-.carousel-control-prev-icon {
-    position: absolute;
-    left: 108rem;
+
+/* 커스텀 버튼 크기/정렬 */
+.swiper-button-prev,
+.swiper-button-next {
+    display: block !important;
+    width: 44px !important;
+    height: 44px !important;
+    color: #cfd5e9 !important;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    bottom: 0;
-    top: auto;
+.swiper-pagination {
+    width: 10px;
+    height: 10px;
+    background: #cfd5e9;
+    border-radius: 50%;
+}
+
+
+/* 아이콘 살짝 톤 다운 */
+.carousel-controls .control-btn i {
+    opacity: .8;
+    color: #606777;
 }
 
 .portfolio-peek {
@@ -168,4 +158,127 @@ button:not(:disabled) {
 
 .portfolio-peek .carousel-inner {
     overflow: visible;
+}
+
+.testimonial-author {
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #e9ecef url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="%2399a">IMG</text></svg>') center/contain no-repeat;
+}
+
+.vr {
+    height: 50px;
+    border-left: 1px solid #333;
+}
+
+
+/* ========== Locations section ========== */
+.locations .small {
+    letter-spacing: .02em;
+}
+
+.locations-list {
+    padding-left: .75rem;
+}
+
+.locations-item {
+    position: relative;
+    padding: .75rem 0 .75rem 1rem;
+    border-left: 3px solid #e9ecef;
+    /* 리스트 왼쪽 얇은 라인 */
+    margin-bottom: 1.25rem;
+}
+
+.locations-item:last-child {
+    margin-bottom: 0;
+}
+
+.locations-item.active {
+    border-left-color: #111;
+}
+
+.locations-item:hover {
+    border-left-color: #555;
+}
+
+.locations-link {
+    display: inline-block;
+    font-weight: 600;
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.locations-link:hover {
+    text-decoration: underline;
+}
+
+.locations-map {
+    min-height: 280px;
+    background: #e5e5e5;
+    /* 밝은 회색 영역 */
+    border-radius: 6px;
+}
+
+/* Footer */
+.footer .newsletter input {
+    max-width: 270px;
+}
+
+.footer-links li+li {
+    margin-top: .4rem;
+}
+
+.footer-links a {
+    color: #111;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+.footer-social i {
+    width: 18px;
+    text-align: center;
+    opacity: .85;
+}
+
+.footer-social a {
+    color: #111;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-policy .list-inline-item+.list-inline-item::before {
+    content: " ";
+    margin: 0 .35rem 0 .25rem;
+    border-left: 1px solid #cfd5e9;
+    padding-left: .6rem;
+}
+
+.footer-social a,
+.footer-links a {
+    font-size: 0.7rem;
+}
+
+
+hr {
+    border-top: 3px solid #333 !important;
 }

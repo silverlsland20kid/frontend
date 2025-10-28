@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Javascript 와 Typescript 차이 예제</h2>
+    <p>결과는 console 확인</p>
+
+
+    <script>
+        function add(a, b) {
+
+            if (typeof a !== "number" || typeof a !== "number") {
+                throw new Error("타입오류! 숫자만 입력해야 합니다.");
+            }
+
+            return a + b;
+        }
+
+        console.log(" === TypeScript (흉내) ===");
+        console.log(add(1, 2));
+
+        try {
+            console.log(addTs("1", "2"));  // ❌ 오류
+        } catch (e) {
+            console.error(e.message);
+        }
+        try {
+            console.log(addTs(null, 2));   // ❌ 오류
+        } catch (e) {
+            console.error(e.message);
+        }
+
+    </script>
+</body>
+
+</html>

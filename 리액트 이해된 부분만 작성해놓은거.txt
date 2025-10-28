@@ -18,60 +18,79 @@ Hook은 React의 “내장 함수”로, 함수형 컴포넌트에서도 상태(
 
 ※ 비구조화 할당(구조분해, Destructuring Assignment) 의 핵심은 “배열/객체에서 값을 꺼내 변수로 빠르게 바인딩하는 문법
 
-1) 배열 비구조화 => 배열은 순서로 매칭
-2) 객체 비구조화 => 객체는 키 이름으로 매칭(순서무관)
-3) 중첩 구조
-4) 기본값 + 별칭 + 중첩 한 번에
-5) 함수 매개변수에서의 비구조화 
-	-(1) 객체 매개변수
-	-(2) 배열 매개변수
-6) React에서 자주 쓰는 패턴
-	-(1) props 비구조화
-	-(2) useState
-	-(3) form 상태 객체
-7) 계산된 속성명(Computed Property)과 함께
+
+※ slice()메서드는 원본을 수정하지 않고 배열이나 문자열의 일부를 추출하여 새 배열이나 문자열로 반환하는 데 사용
+
+
+※ useEffect 함수 사용시 빈 배열 사용하는 이유
+
+형태	실행 시점	대표 사용 예
+useEffect(() => {...}, [])	마운트 시 한 번만	이벤트 등록, 초기 데이터, 타이머
+useEffect(() => {...}, [변수])	변수 변경 시	API 재요청, DOM 업데이트
+useEffect(() => {...})	매 렌더링마다	거의 사용 X (디버깅용)
+
+useEffect는 “렌더링 후 자동 호출되는 함수”
+두 번째 배열은 “감시 카메라 리스트”입니다.
+
+- []: “감시대상 없음 → 한 번만 실행”
+- [count]: “count만 감시 → count 바뀔 때만 실행”
+- 없음: “모두 감시 → 렌더링마다 실행”
+
+
+＊＊ useEffect 함수는 의존성 배열이 왜 필요함 도대체?＊＊ 걍 외우시길..
+이유 1: React는 렌더링을 자주 다시 하기 때문
+이유 2: “어떤 값이 바뀔 때만” 실행하고 싶기 때문
+이유 3: “값의 최신 상태”를 정확히 반영하기 위해
+
+=====> React는 렌더링마다 독립적인 함수 실행 컨텍스트를 만든단말임
+=====> 즉, 렌더링이 새로 되면 이전 렌더링의 변수와 함수는 사라짐
+=====> 그래서 의존성 배열에 변수를 안 넣으면, React는 “이 effect가 어떤 값에 의존하는지”를 추적할 수 없음.
+=====> 그럼 “stale closure”(오래된 값 참조) 문제로 잘못된 상태를 읽게 됨요. 그러므로 의존성 배열이 필요한것
+
+★  “React가 언제 effect를 다시 실행해야 하는지 알려주는 신호등이 바로 의존성 배열이다.” ★
 
 
 
-
-slice()메서드는 원본을 수정하지 않고 배열이나 문자열의 일부를 추출하여 새 배열이나 문자열로 반환하는 데 사용
-→ 만약 products 배열이 다음과 같다고 해볼게요:
-
-const products = [
-  { name: "메인상품", img: "main.jpg", category: "추천" },
-  { name: "보조상품1", img: "sub1.jpg", category: "신상" },
-  { name: "보조상품2", img: "sub2.jpg", category: "인기" }
-];
-그러면 products.slice(1)은:
-
-[
-  { name: "보조상품1", img: "sub1.jpg", category: "신상" },
-  { name: "보조상품2", img: "sub2.jpg", category: "인기" }
-]
-즉 첫 번째 상품(메인 상품) 은 제외하고,
-그 다음 상품들(사이드 상품) 만 화면에 렌더링합니다.
-
-
- Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-const onChangeSearch = (e) => {
+※ const onChangeSearch = (e) => {
     setsearch(e.target.value);
   }
-함수 실행 시 매개변수로e값 넣어줌 e.target.value => 키보드나 마우스 이벤트
+함수 실행 시 매개변수로e값 넣어줌 e.target.value => 키보드나 마우스 이벤트 실행될때 무조건 넣어야함
 
-map 메소드 사용시 key값 id는 무조건 입력해야함
+※ map 메소드 사용시 key값 id는 무조건 입력해야함
 public파일 내의 이미지 경로는 ./ 으로만 작성해도 인식함
-큰 div가 2개 이상일 경우 무조건 하나의 div로 감싸줘야 함
+
+※ 큰 div가 2개 이상일 경우 무조건 하나의 div로 감싸줘야 함
+
 
 <터미널 명령어>
-slick 설치 : npm i bootstrap react-slick slick-carousel
 vite 설치: npm create vite@latest .
-swiper설치 : npm i swiper
 router 설치 : vite 설치 후 npm i react-router-dom
+	ㄴ main.jsx 파일에서 import { BrowserRouter } from "react-router-dom"; 해주고
+	ㄴ <BrowserRouter></BrowserRouter>
+slick 설치 : npm i bootstrap react-slick slick-carousel
+swiper설치 : npm i swiper
+react dom 과 swiper 동시에 프로그램 설치 : npm i react-dom swiper
 
+※프로그램 설치 후 app.css내용 다 지우고, index.css에는 이 값을 넣어주는게 좋음
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-※ 리액트 아이콘 설치 : npm install react-icons
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+※ 리액트 아이콘 설치 명령어 : npm install react-icons
 import { useState } from 'react'
 import Slider from 'react-slick'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
@@ -160,3 +179,10 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+1023>bootpo 과제 끝내야함
+

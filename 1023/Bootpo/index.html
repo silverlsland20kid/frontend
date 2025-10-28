@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80" tabindex="0">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><i class="fa fa-heartbeat" aria-hidden="true"></i></a>
@@ -26,11 +28,10 @@
                     <!-- m margin s-start 오른쪽정렬 
                     블럭요소 중앙 정렬 가려면  w-50 50%넓이 mx-auto  중앙정렬
                     flexbox  d-flex(display:flex) justify-content-center 가로 중앙정렬 align-item-center  -->
-                    <a class="nav-link active" aria-current="page" href="#about">About</a>
-                    <a class="nav-link" href="#service">SERVICE</a>
-                    <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-                    <a class="nav-link" href="#pricing">PRICING</a>
-                    <a class="nav-link" href="#contact">CONTACT</a>
+                    <a class="nav-link active" aria-current="page" href="#link1">link1</a>
+                    <a class="nav-link" href="#link2">link2</a>
+                    <a class="nav-link" href="#link3">link3</a>
+                    <a class="nav-link" href="#link4">link4</a>
                 </div>
             </div>
 
@@ -56,8 +57,8 @@
         </div>
     </div>
 
-    <!-- Container (About Section) -->
-    <div id="about" class="container-fluid py-5">
+    <!-- link1 -->
+    <div id="link1" class="container-fluid py-5">
         <div class="row align-item-center">
             <div class="col-sm-6 px-5">
                 <h4 class="mb-4">Tag line</h4>
@@ -79,86 +80,81 @@
         </div>
     </div>
 
-    <!-- Services Section -->
-    <div id="portfolioCarousel" class="carousel slide portfolio-peek px-5" data-bs-ride="carousel"
-        data-bs-interval="4000">
+    <!-- link2 (Swiper 버전) -->
+    <section id="link2" class="px-5">
         <h4 class="mb-2">Tagline</h4>
         <h1 class="mb-1"><b>Introduce your team</b></h1>
         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row justify-content-center gy-4 py-3 pb-5">
-                    <div class="col-md-4">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="team-avatar mb-3"></div>
-                                <h5 class="mb-1">Full name</h5>
-                                <div class="text-muted mb-2">Job title</div>
-                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    varius enim in eros elementum tristique.</p>
-                                <div class="d-flex gap-3">
-                                    <i class="fa fa-linkedin"></i>
-                                    <i class="fa fa-times"></i>
-                                    <i class="fa fa-dribbble"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="card shadow-sm ">
-                            <div class="card-body">
-                                <div class="team-avatar mb-3"></div>
-                                <h5 class="mb-1">Full name</h5>
-                                <div class="text-muted mb-2">Job title</div>
-                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    varius enim in eros elementum tristique.</p>
-                                <div class="d-flex gap-3">
-                                    <i class="fa fa-linkedin"></i>
-                                    <i class="fa fa-times"></i>
-                                    <i class="fa fa-dribbble"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="swiper team-swiper">
+            <div class="swiper-wrapper">
 
-                    <div class="col-md-4">
-                        <div class="card shadow-sm ">
-                            <div class="card-body">
-                                <div class="team-avatar mb-3"></div>
-                                <h5 class="mb-1">Full name</h5>
-                                <div class="text-muted mb-2">Job title</div>
-                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    varius enim in eros elementum tristique.</p>
-                                <div class="d-flex gap-3">
-                                    <i class="fa fa-linkedin"></i>
-                                    <i class="fa fa-times"></i>
-                                    <i class="fa fa-dribbble"></i>
-                                </div>
+                <!-- slide 1 -->
+                <div class="swiper-slide">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="team-avatar mb-3"></div>
+                            <h5 class="mb-1">Full name</h5>
+                            <div class="text-muted mb-2">Job title</div>
+                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                                enim in eros elementum tristique.</p>
+                            <div class="d-flex gap-3">
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-times"></i>
+                                <i class="fa fa-dribbble"></i>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- slide 2 -->
+                <div class="swiper-slide">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="team-avatar mb-3"></div>
+                            <h5 class="mb-1">Full name</h5>
+                            <div class="text-muted mb-2">Job title</div>
+                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                                enim in eros elementum tristique.</p>
+                            <div class="d-flex gap-3">
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-times"></i>
+                                <i class="fa fa-dribbble"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide 3 -->
+                <div class="swiper-slide">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="team-avatar mb-3"></div>
+                            <h5 class="mb-1">Full name</h5>
+                            <div class="text-muted mb-2">Job title</div>
+                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                                enim in eros elementum tristique.</p>
+                            <div class="d-flex gap-3">
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-times"></i>
+                                <i class="fa fa-dribbble"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- 좌우 버튼 & 페이저 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
-
-        <!-- 좌우 버튼 -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Prev</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-
-        <!-- 페이저(점) — JS가 개수에 맞춰 생성 -->
-        <div class="carousel-indicators"></div>
-    </div>
+    </section>
 
 
-
-    <section class="container py-5 text-center">
+    <!-- link3 -->
+    <section class="container py-5 my-5 text-center" id="link3">
         <h2 class="mb-1">What our customers say</h2>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="container-fluid align-item-center py-3">
@@ -188,158 +184,155 @@
                 </div>
             </div>
         </div>
+
+        <div class="testimonial-author d-flex align-items-center justify-content-center mt-5">
+            <div class="author-img me-3"></div>
+            <div class="text-start">
+                <strong>Name Surname</strong><br>
+                <span class="text-muted small">Position, Company name</span>
+            </div>
+            <div class="vr mx-3"></div>
+            <i class="fa fa-envelope fa-fw">WEBFLOW</i>
+        </div>
     </section>
 
-    <div class="container-fluid text-center bg-light py-5" id="portfolio">
-        <!-- p  패딩 y 위아래 5(3rem - 48px) -->
-        <h2>Portfolio</h2><br />
-        <h4>What we have created</h4>
+    <!-- link4 -->
+    <section id="link4" class="container py-5 locations">
+        <div class="mb-3 text-muted small">Tagline</div>
+        <h1 class="fw-bold mb-2">Our locations</h1>
+        <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <div class="row justify-content-center gy-4 slideanim">
-            <div class="col-md-4">
-                <div class="card shadow-sm" style="width:80%; margin: 0 auto;">
-                    <img class="card-img-top" src="image/paris.jpg" alt="paris">
-                    <div class="card-body">
-                        <h5 class="card-title">Paris</h5>
-                        <p class="card-text">Yes, we built Paris </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm" style="width:80%; margin: 0 auto;">
-                    <img class="card-img-top" src="image/newyork.jpg" alt="New york">
-                    <div class="card-body">
-                        <h5 class="card-title">New york</h5>
-                        <p class="card-text">Yes, we built New york </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm" style="width:80%; margin: 0 auto;">
-                    <img class="card-img-top" src="image/sanfran.jpg" alt="sanfran">
-                    <div class="card-body">
-                        <h5 class="card-title">Sanfran</h5>
-                        <p class="card-text">Yes, we built sanfran </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div class="row g-4 align-items-start">
+            <!-- 왼쪽 리스트 -->
+            <div class="col-12 col-lg-5">
+                <ul class="locations-list list-unstyled m-0">
+                    <li class="locations-item active" data-city="Sydney">
+                        <h5 class="mb-1">Sydney</h5>
+                        <div class="text-muted small mb-2">123 Sample St, Sydney NSW 2000 AU</div>
+                        <a href="#" class="locations-link">View Map</a>
+                    </li>
 
+                    <li class="locations-item" data-city="New York">
+                        <h5 class="mb-1">New York</h5>
+                        <div class="text-muted small mb-2">123 Sample St, New York NY 10000 USA</div>
+                        <a href="#" class="locations-link">View Map</a>
+                    </li>
 
-
-    <div id="pricing" class="container py-5">
-        <div class="text-center mb-5">
-            <h2>Pricing</h2>
-            <h4>Choose a payment plan that works for you</h4>
-        </div>
-
-        <div class="row justify-content-center gy-4 slideanim">
-            <div class="col-12 col-md-4">
-                <div class="card text-center shadow-sm h-100">
-                    <div class="card-header">
-                        <h1 class="my-0">Basic</h1>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>20</strong> Lorem</p>
-                        <p><strong>15</strong> Ipsum</p>
-                        <p><strong>5</strong> Dolor</p>
-                        <p><strong>2</strong> Sit</p>
-                        <p><strong>Endless</strong> Amet</p>
-                    </div>
-                    <div class="card-footer">
-                        <h3>$19</h3>
-                        <h4>per month</h4>
-                        <button class="btn my-btn btn-sm">Sign Up</button>
-                    </div>
-                </div>
+                    <li class="locations-item" data-city="London">
+                        <h5 class="mb-1">London</h5>
+                        <div class="text-muted small mb-2">123 Sample St, London W1C 1DE, United Kingdom</div>
+                        <a href="#" class="locations-link">View Map</a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="col-12 col-md-4">
-                <div class="card text-center shadow-sm h-100">
-                    <div class="card-header">
-                        <h1 class="my-0">Pro</h1>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>50</strong> Lorem</p>
-                        <p><strong>25</strong> Ipsum</p>
-                        <p><strong>10</strong> Dolor</p>
-                        <p><strong>5</strong> Sit</p>
-                        <p><strong>Endless</strong> Amet</p>
-                    </div>
-                    <div class="card-footer">
-                        <h3>$29</h3>
-                        <h4>per month</h4>
-                        <button class="btn my-btn btn-sm">Sign Up</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="card text-center shadow-sm h-100">
-                    <div class="card-header">
-                        <h1 class="my-0">Premium</h1>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>100</strong> Lorem</p>
-                        <p><strong>50</strong> Ipsum</p>
-                        <p><strong>25</strong> Dolor</p>
-                        <p><strong>10</strong> Sit</p>
-                        <p><strong>Endless</strong> Amet</p>
-                    </div>
-                    <div class="card-footer">
-                        <h3>$49</h3>
-                        <h4>per month</h4>
-                        <button class="btn my-btn btn-sm">Sign Up</button>
+            <!-- 오른쪽 지도 프리뷰 -->
+            <div class="col-12 col-lg-7">
+                <div class="locations-map d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <i class="fa fa-map-marker mb-3" aria-hidden="true" style="font-size:48px; opacity:.35;"></i>
+                        <div id="mapLabel" class="map-label text-muted">Sydney</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Container (Contact Section) -->
-    <div id="contact" class="container-fluid bg-grey py-5">
-        <h2 class="text-center mb-4">CONTACT</h2>
-        <div class="row">
-            <div class="col-md-5">
-                <p>Contact us and we'll get back to you within 24 hours.</p>
-                <p><i class="fa fa-map-marker fa-fw"></i> Chicago, US</p>
-                <p><i class="fa fa-phone fa-fw"></i> +00 1515151515</p>
-                <p><i class="fa fa-envelope fa-fw"></i> myemail@something.com</p>
+
+    <footer class="footer container py-5">
+        <div class="row gy-4 align-items-start pb-5">
+            <div class="col-12 col-lg-6">
+                <div class="fs-4 fw-bold mb-3" style="font-family:serif;">Logo</div>
+                <p class="mb-3">Join our newsletter to stay up to date on features and releases.</p>
+
+                <form class="newsletter d-flex gap-2 mb-2" onsubmit="return false;">
+                    <input type="email" class="form-control form-control-sm" placeholder="Enter your email"
+                        aria-label="Email">
+                    <button class="btn btn-outline-dark btn-sm">Subscribe</button>
+                </form>
+                <small class="text-muted d-block">
+                    By subscribing you agree to with our <a href="#"
+                        class="text-decoration-underline">Privacy&nbsp;Policy</a>
+                    and provide consent to receive updates from our company.
+                </small>
             </div>
-            <div class="col-md-7 slideanim">
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment"
-                        rows="5"></textarea>
-                </div>
-                <div class="text-end">
-                    <button class="btn btn-primary" type="submit">Send</button>
-                </div>
+
+            <!-- Column One -->
+            <div class="col-6 col-lg-2">
+                <div class="fw-semibold mb-2">Column One</div>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Link One</a></li>
+                    <li><a href="#">Link Two</a></li>
+                    <li><a href="#">Link Three</a></li>
+                    <li><a href="#">Link Four</a></li>
+                    <li><a href="#">Link Five</a></li>
+                </ul>
+            </div>
+
+            <!-- Column Two -->
+            <div class="col-6 col-lg-2">
+                <div class="fw-semibold mb-2">Column Two</div>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Link Six</a></li>
+                    <li><a href="#">Link Seven</a></li>
+                    <li><a href="#">Link Eight</a></li>
+                    <li><a href="#">Link Nine</a></li>
+                    <li><a href="#">Link Ten</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="col-12 col-lg-2">
+                <div class="fw-semibold mb-2">Follow Us</div>
+                <ul class="list-unstyled footer-social">
+                    <li><i class="fa fa-facebook-official"></i><a href="#">Facebook</a></li>
+                    <li><i class="fa fa-instagram"></i><a href="#">Instagram</a></li>
+                    <li><i class="fa fa-twitter"></i><a href="#">X</a></li>
+                    <li><i class="fa fa-linkedin-square"></i><a href="#">LinkedIn</a></li>
+                    <li><i class="fa fa-youtube-play"></i><a href="#">Youtube</a></li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <img src="image/map.png" class="w3-image w3-greyscale-min" style="width:100%">
-    <footer class="container-fluid text-center py-4 bg-light">
-        <a href="#myPage" title="To Top" class="d-inline-block mb-2" style="color: #b7becf; font-size: 24px;">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-        <p>
-            Bootstrap Theme Made By
-            <a href="https://www.w3schools.com" title="Visit w3schools" class="text-decoration-none"
-                style="color: #b7becf;">
-                www.w3schools.com
-            </a>
-        </p>
+        <hr class="my-4">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 small">
+            <div class="text-muted">© 2024 Relume. All rights reserved.</div>
+            <ul class="list-inline m-0 footer-policy">
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                <li class="list-inline-item"><a href="#">Cookies Settings</a></li>
+            </ul>
+        </div>
     </footer>
+
+
+    <script>
+        // link2: Swiper 초기화
+        const teamSwiper = new Swiper('.team-swiper', {
+            loop: true,
+            speed: 600,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            slidesPerView: 1.05,
+            spaceBetween: 16,
+            centeredSlides: false,
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                992: { slidesPerView: 3, spaceBetween: 24 }
+            },
+            navigation: {
+                nextEl: '.team-swiper .swiper-button-next',
+                prevEl: '.team-swiper .swiper-button-prev',
+            },
+            pagination: {
+                el: '.team-swiper .swiper-pagination',
+                clickable: true
+            },
+        });
+    </script>
 
     <script>
         $(window).scroll(function () {
@@ -353,6 +346,19 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.locations-item');
+            const label = document.getElementById('mapLabel');
+
+            items.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    items.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    label.textContent = item.dataset.city;
+                });
+            });
+        });
 
     </script>
 </body>

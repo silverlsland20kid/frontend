@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick 슬라이더 예제</title>
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <style>
+        /* Slick 화살표 스타일 */
+        .slick-prev:before, .slick-next:before {
+            color: #333;
+            font-size: 24px;
+        }
+        .slick-prev, .slick-next {
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+        }
+        .slick-prev {
+            left: 5px;
+        }
+        .slick-next {
+            right: 5px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        
+        .slider-wrapper {
+            margin-bottom: 60px;
+        }
+        
+        .slider-container {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .slider-container {
+                flex-direction: column;
+            }
+        }
+        
+        .slider {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .slider-box {
+            margin-right: 15px;
+        }
+        
+        .slider-box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .slider-box .content {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .options-panel {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .options-panel h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .option {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .option-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .option-desc {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Slick 슬라이더 두 가지 버전</h1>
+        
+        <!-- 첫 번째 슬라이더: 한 번에 하나씩 표시 -->
+        <div class="slider-wrapper">
+            <div class="slider-container">
+                <div class="slider slider-one">
+                    <div class="slider-box">
+                        <div class="content">슬라이드 1</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content">슬라이드 2</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content">슬라이드 3</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content">슬라이드 4</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content">슬라이드 5</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content">슬라이드 6</div>
+                    </div>
+                </div>
+                
+                <div class="options-panel">
+                    <h2>📋 슬라이더 1 옵션</h2>
+                    <div class="option">
+                        <div class="option-name">slidesToShow: 1</div>
+                        <div class="option-desc">화면에 한 번에 표시되는 슬라이드 개수</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">slidesToScroll: 1</div>
+                        <div class="option-desc">한 번에 이동할 슬라이드 개수</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">infinite: true</div>
+                        <div class="option-desc">무한 루프 모드 (끝에서 처음으로 돌아감)</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">autoplay: true</div>
+                        <div class="option-desc">자동으로 다음 슬라이드로 이동</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">autoplaySpeed: 2000</div>
+                        <div class="option-desc">자동 재생 속도 (밀리초)</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">arrows: true</div>
+                        <div class="option-desc">화살표 네비게이션 표시</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">dots: true</div>
+                        <div class="option-desc">점(dot) 인디케이터 표시</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 두 번째 슬라이더: 한 번에 3개씩 표시 -->
+        <div class="slider-wrapper">
+            <div class="slider-container">
+                <div class="slider slider-two">
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">슬라이드 1</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">슬라이드 2</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">슬라이드 3</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">슬라이드 4</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">슬라이드 5</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">슬라이드 6</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">슬라이드 7</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">슬라이드 8</div>
+                    </div>
+                    <div class="slider-box">
+                        <div class="content" style="background: linear-gradient(135deg, #ff8a80 0%, #ffc107 100%);">슬라이드 9</div>
+                    </div>
+                </div>
+                
+                <div class="options-panel">
+                    <h2>📋 슬라이더 2 옵션</h2>
+                    <div class="option">
+                        <div class="option-name">slidesToShow: 3</div>
+                        <div class="option-desc">화면에 한 번에 3개의 슬라이드 표시</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">slidesToScroll: 1</div>
+                        <div class="option-desc">한 번에 이동할 슬라이드 개수</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">infinite: true</div>
+                        <div class="option-desc">무한 루프 모드</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">autoplay: true</div>
+                        <div class="option-desc">자동 재생 활성화</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">autoplaySpeed: 2500</div>
+                        <div class="option-desc">자동 재생 속도</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">arrows: true</div>
+                        <div class="option-desc">화살표 네비게이션</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">dots: false</div>
+                        <div class="option-desc">점 인디케이터 숨김 (다중 슬라이드는 주로 화살표 사용)</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">centerMode: false</div>
+                        <div class="option-desc">중앙 정렬 모드 비활성화</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-name">variableWidth: false</div>
+                        <div class="option-desc">고정 너비 사용</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // 첫 번째 슬라이더: 한 번에 1개씩 표시
+            $('.slider-one').slick({
+                slidesToShow: 1,      // 한 번에 표시할 슬라이드 개수
+                slidesToScroll: 1,    // 한 번에 이동할 슬라이드 개수
+                infinite: true,        // 무한 루프
+                autoplay: true,       // 자동 재생
+                autoplaySpeed: 2000,  // 2초마다 이동
+                arrows: true,         // 화살표 표시
+                dots: true,           // 점 인디케이터 표시
+                pauseOnHover: true,   // 마우스 오버 시 일시정지
+                fade: false,
+                cssEase: 'linear'
+            });
+            
+            // 두 번째 슬라이더: 한 번에 3개씩 표시
+            $('.slider-two').slick({
+                slidesToShow: 3,      // 한 번에 표시할 슬라이드 개수
+                slidesToScroll: 1,    // 한 번에 이동할 슬라이드 개수
+                infinite: true,       // 무한 루프
+                autoplay: true,       // 자동 재생
+                autoplaySpeed: 2500,  // 2.5초마다 이동
+                arrows: true,         // 화살표 표시
+                dots: false,          // 점 인디케이터 숨김
+                pauseOnHover: true,   // 마우스 오버 시 일시정지
+                centerMode: false,    // 중앙 정렬 모드 비활성화
+                variableWidth: false, // 고정 너비 사용
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
+
