@@ -105,7 +105,7 @@ export default function App() {
         </div>
       </nav>
 
-      {/* ✅ 각 섹션의 ref 연결 → scrollIntoView나 offsetTop 계산에 사용 */}
+      {/* 각 섹션의 ref 연결 → scrollIntoView나 offsetTop 계산에 사용 */}
       <section ref={heroRef} className="section section-hero">
         <div className="section-content">
           <h2 className="fade-in">Welcome to One-page Scroll</h2>
