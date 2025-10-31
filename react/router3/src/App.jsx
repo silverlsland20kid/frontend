@@ -1,43 +1,22 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import "./App.css";
-import Products from "./pages/Products";
-import Contact from "./pages/Contact";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import SwiperSlideComponent from "./pages/SwiperSlide";
+import { Routes, Route } from "react-router-dom";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <div className="app">
-      <nav className="navbar">
-        <Link to="/" className="logo">
-          React Router
-        </Link>
-        <div className="nav-links">
-          <Link to="/">홈</Link>
-          <Link to="/about">소개</Link>
-          <Link to="/products">상품</Link>
-          <Link to="/contact">연락처</Link>
-        </div>
-      </nav>
-
-      <main className="main-container">
+      <Navbar />
+      <main className="main-content">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <SwiperSlideComponent />
-                <Home />
-              </>
-            }
-          />
+          <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
