@@ -9,6 +9,8 @@ scss2 에 사용된 스타일 속성들 변수 공부하기
 D:\eunseom lee\files\react
 => 13번까지 읽음
 
+11/05 
+try catch문 파악
 
 10/31
 ***오후수업때 router2을 router2_2 으로 복사해서 tap 페이지 추가해서 작업해보기
@@ -34,6 +36,12 @@ Hook은 React의 “내장 함수”로, 함수형 컴포넌트에서도 상태(
 //concat은 기존의 배열을 수정하지 않고 새 배열 반환하는 속성
 
 ※ 비구조화 할당(구조분해, Destructuring Assignment) 의 핵심은 “배열/객체에서 값을 꺼내 변수로 빠르게 바인딩하는 문법
+
+
+
+
+https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=549152ded3776628fb05dad54973b359&units=metric
+
 
 
 ※ slice()메서드는 원본을 수정하지 않고 배열이나 문자열의 일부를 추출하여 새 배열이나 문자열로 반환하는 데 사용
@@ -103,6 +111,7 @@ swiper설치 : npm i swiper
 react dom 과 swiper 동시에 프로그램 설치 : npm i react-dom swiper
 react icons 설치 :  npm i react-icons
 firebase 설치 : npm i firebase
+axios 설치 : npm i axios
 잘못 설치한 프로그램 삭제 : npm uninstall react-icon => uninstall 작성
 
 ※프로그램 설치 후 app.css내용 다 지우고, index.css에는 이 값을 넣어주는게 좋음

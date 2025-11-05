@@ -79,7 +79,7 @@ export default function App() {
     }
   };
 
-  // ***** 추가설명. 읽고 지우셈
+  // *****  추가설명. 읽고 지우셈
   // React의 state와 DOM의 style은 완전히 다름
   // 브라우저에서 subMenu.style.display는 “문자열”을 반환합니다.
   // 그 문자열이 "block"이면 true,
