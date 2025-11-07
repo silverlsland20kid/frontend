@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.countDisplay {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    transition: color 0.3s ease;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #aaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+.resetButton {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
