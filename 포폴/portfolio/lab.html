@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style_bak.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="main.html" aria-current="page"
+            class="site-header__logo-link site-header__link--current">SilverIsland</a>
+        </div>
+        <nav class="site-header__nav">
+          <div class="site-header__nav-item">
+            <a href="main.html" aria-current="page" class="site-header__link">WORK</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="lab.html" class="site-header__link site-header__link--current">LAB</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="about.html" class="site-header__link">ABOUT</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="#" class="site-header__link" id="contactModalBtn">CONTACT</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTACT 모달 -->
+    <div class="contact-modal" id="contactModal" aria-modal="true" role="dialog" tabindex="-1">
+      <div class="contact-modal__backdrop" id="contactModalBackdrop"></div>
+      <div class="contact-modal__content">
+        <button class="contact-modal__close" id="contactModalClose" aria-label="Close">&times;</button>
+        <h2 class="contact-modal__title">Contact</h2>
+        <ul class="contact-modal__list">
+          <li>
+            <a href="mailto:dmstja2110@naver.com" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">✉️</span>
+              dmstja2110@naver.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/your-github-id" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">👽</span>
+              github.com/your-github-id
+            </a>
+          </li>
+          <li>
+            <a href="https://blog.naver.com/coolkids2" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">💫</span>
+              blog.naver.com/coolkids2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <main class="main-section">
+      <div class="project-list project-list-lab">
+        <aside class="project-list__side">
+          <!-- Skills -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__circle"></div>
+              <div class="project-list__skills" id="skillsSection">
+                <div class="project-list__label">Experiments</div>
+                <ul class="project-list__skills-list">
+                  <li>HTML5 / CSS3 </li>
+                  <li>JavaScript (ES6+), jQuery</li>
+                  <li>Figma / photoshop</li>
+                  <li>swiper / gsap(기초)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Attitude / Work Style -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__circle"></div>
+              <div class="project-list__attitude" id="attitudeSection">
+                <!-- <div class="project-list__label">Work Attitude</div> -->
+                <ul class="project-list__attitude-list">
+                  <li>디테일과 구조를 모두 챙기는 퍼블리싱, 신기술/새로운 시도에 거부감 없음</li>
+                  <li>문제 발생 시 빠른 리서치 및 대응 -- 피드백 반영 & 꾸준한 개선</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 필요시 기타 정보 -->
+        </aside>
+
+        <section class="lab-videos" aria-label="실험 영상 목록">
+          <div class="lab-videos__grid">
+            <!-- 1세트 -->
+            <article class="video-card item--mo">
+              <div class="video-card__frame video-card__frame--mo">
+                <video class="video-card__media" src="assets/video02_mo.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--mo">
+              <div class="video-card__frame video-card__frame--mo">
+                <video class="video-card__media" src="assets/video07_mo.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--pc">
+              <div class="video-card__frame video-card__frame--pc">
+                <video class="video-card__media" src="assets/video06.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--mo">
+              <div class="video-card__frame video-card__frame--mo">
+                <video class="video-card__media" src="assets/video05_mo.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--mo">
+              <div class="video-card__frame video-card__frame--mo">
+                <video class="video-card__media" src="assets/video08_mo.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--pc">
+              <div class="video-card__frame video-card__frame--pc">
+                <video class="video-card__media" src="assets/video01.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--pc">
+              <div class="video-card__frame video-card__frame--pc">
+                <video class="video-card__media" src="assets/video09.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--mo">
+              <div class="video-card__frame video-card__frame--mo">
+                <video class="video-card__media" src="assets/video09_mo.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card item--mo">
+              <div class="video-card__frame video-card__frame--mo">
+                <video class="video-card__media" src="assets/video10_mo.mp4" autoplay muted playsinline loop
+                  preload="auto">
+                </video>
+              </div>
+            </article>
+
+          </div>
+          <p class="back-to-top"><a href="#" id="backToTop">↑ BACK TO TOP</a></p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+
+
+    // Contact 모달 열기
+    document.getElementById('contactModalBtn').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('contactModal').style.display = 'block';
+      document.body.style.overflow = 'hidden'; // 스크롤 방지
+      document.getElementById('contactModalClose').focus();
+    });
+    // Contact 모달 닫기 (버튼, 배경 클릭, ESC)
+    function closeContactModal() {
+      document.getElementById('contactModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.getElementById('contactModalClose').addEventListener('click', closeContactModal);
+    document.getElementById('contactModalBackdrop').addEventListener('click', closeContactModal);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeContactModal();
+    });
+
+    document.getElementById("backToTop").addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+</body>
+
+</html>

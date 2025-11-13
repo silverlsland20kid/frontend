@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="./css/style_bak.css" />
+  <style>
+    .work-wrap {
+      max-width: 1000px;
+      margin: 80px auto 120px;
+      padding: 0 16px
+    }
+
+    .work-hero {
+      margin: 0 0 24px;
+      border-radius: 12px;
+      overflow: hidden
+    }
+
+    .work-hero img,
+    .work-hero video {
+      width: 100%;
+      height: auto;
+      display: block
+    }
+
+    .work-title {
+      font-family: "Oswald", sans-serif;
+      font-size: 2rem;
+      margin: 8px 0 4px
+    }
+
+    .work-summary {
+      font-family: "Libertinus Serif", serif;
+      margin: 0 0 16px;
+      color: #333
+    }
+
+    .work-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none
+    }
+
+    .work-meta li {
+      font-size: .95rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 6px 10px;
+      background: #fff
+    }
+
+    .work-media figure {
+      margin: 0 0 24px
+    }
+
+    .work-media img,
+    .work-media video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block
+    }
+
+    .back {
+      margin-top: 24px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="work-wrap" id="workRoot">
+    <!-- JS가 렌더링 -->
+  </div>
+
+  <script>
+    (async () => {
+      const slug = new URLSearchParams(location.search).get('slug');
+      const root = document.getElementById('workRoot');
+
+      if (!slug) {
+        root.innerHTML = `<p>잘못된 접근입니다. <a href="main.html">목록으로</a></p>`;
+        return;
+      }
+
+      try {
+        // JSON 불러오기
+        const res = await fetch(`./data/work/${slug}.json`);
+        if (!res.ok) throw new Error(res.status);
+        const w = await res.json();
+
+        // HTML 뿌리기
+        root.innerHTML = `
+      <a href="main.html">← Back</a>
+      <h1>${w.title}</h1>
+      <p>${w.summary || ''}</p>
+      <ul>
+        ${w.role ? `<li>Role: ${w.role.join(', ')}</li>` : ''}
+        ${w.stack ? `<li>Stack: ${w.stack.join(', ')}</li>` : ''}
+        ${w.period ? `<li>Period: ${w.period}</li>` : ''}
+      </ul>
+      ${(w.media || []).map(m =>
+          m.type === 'video'
+            ? `<video controls src="${m.src}"></video>`
+            : `<img src="${m.src}" alt="${m.alt || ''}">`
+        ).join('')}
+    `;
+      } catch (e) {
+        root.innerHTML = `<p>콘텐츠를 불러오지 못했습니다.<br><a href="main.html">목록으로</a></p>`;
+        console.error(e);
+      }
+    })();
+  </script>
+
+
+</body>
+
+</html>

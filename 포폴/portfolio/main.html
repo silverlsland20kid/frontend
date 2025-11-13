@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SilverIsland Portfolio</title>
+  <link rel="stylesheet" href="./css/style_bak.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="main.html" aria-current="page"
+            class="site-header__logo-link site-header__link--current">SilverIsland</a>
+        </div>
+        <nav class="site-header__nav">
+          <div class="site-header__nav-item">
+            <a href="main.html" aria-current="page" class="site-header__link site-header__link--current">WORK</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="lab.html" class="site-header__link">LAB</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="about.html" class="site-header__link">ABOUT</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="#" class="site-header__link" id="contactModalBtn">CONTACT</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTACT 모달 -->
+    <div class="contact-modal" id="contactModal" aria-modal="true" role="dialog" aria-labelledby="contactModalTitle"
+      tabindex="-1">
+      <div class="contact-modal__backdrop" id="contactModalBackdrop"></div>
+      <div class="contact-modal__content">
+        <button class="contact-modal__close" id="contactModalClose" aria-label="Close">&times;</button>
+        <h2 class="contact-modal__title" id="contactModalTitle">Contact</h2>
+        <ul class="contact-modal__list">
+          <li>
+            <a href="mailto:dmstja2110@naver.com" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">✉️</span>
+              dmstja2110@naver.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/your-github-id" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">👽</span>
+              github.com/your-github-id
+            </a>
+          </li>
+          <li>
+            <a href="https://blog.naver.com/coolkids2" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">💫</span>
+              blog.naver.com/coolkids2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <main class="main-section">
+      <div class="project-list">
+        <!-- Side (시계/도시 등) -->
+        <aside class="project-list__side">
+          <!-- 시계 행 -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__circle"></div>
+              <div class="project-list__clock">
+                <div id="timeContainer">
+                  <div id="time">5:37</div>
+                  <div id="ampm">AM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 도시 행 -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__circle"></div>
+              <div class="project-list__city">
+                <a href="#" class="project-list__city-link">seoul</a>
+              </div>
+            </div>
+          </div>
+          <!-- 빈 행 (필요시 추가) -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__city"></div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- 썸네일 -->
+        <div class="project-list__thumb-viewer" id="cardThumbViewer"></div>
+
+        <!-- 연도 (Years) -->
+        <div class="project-list__years">
+          <div class="project-list__year-item">[2025]</div>
+          <div class="project-list__year-item"></div>
+          <div class="project-list__year-item"></div>
+          <div class="project-list__year-item"></div>
+          <div class="project-list__year-item"></div>
+          <div class="project-list__year-item"></div>
+          <div class="project-list__year-item">[2024]</div>
+          <div class="project-list__year-item"></div>
+          <div class="project-list__year-item">[2023]</div>
+
+        </div>
+
+        <!-- Project (List) -->
+        <section class="project-list__cards">
+          <div class="project-list__card-wrap">
+            <a href="/work/eider-exhibition" class="project-card__link" data-thumb="./assets/thumbs/sample00.png"
+              data-slug="eider-exhibition">
+              <div class="project-card__content project-card__content--new-exp">
+                <div class="project-card__title">Eider exhibition</div>
+                <div class="project-card__subtitle">publishing<br></div>
+              </div>
+            </a>
+            <a href="/work/k2-exhibition" class="project-card__link" data-thumb="./assets/thumbs/sample01.png"
+              data-slug="k2-exhibition">
+              <div class="project-card__content project-card__content--new-exp">
+                <div class="project-card__title">K2 exhibition/event</div>
+                <div class="project-card__subtitle">publishing<br></div>
+              </div>
+            </a>
+            <a href="/work/handsome-magazine" class="project-card__link" data-thumb="./assets/thumbs/sample03.png"
+              data-slug="handsome-magazine">
+              <div class="project-card__content project-card__content--circle">
+                <div class="project-card__title">Handsome magazine</div>
+                <div class="project-card__subtitle">publishing<br></div>
+              </div>
+            </a>
+            <a href="/work/kolonmall-exhibition" class="project-card__link" data-thumb="./assets/thumbs/sample04.png"
+              data-slug="kolonmall-exhibition">
+              <div class="project-card__content project-card__content--snap">
+                <div class="project-card__title">Kolonmall exhibition</div>
+                <div class="project-card__subtitle">publishing<br></div>
+              </div>
+            </a>
+            <a href="/work/daily-diary" class="project-card__link" data-slug="daily-diary">
+              <div class="project-card__content project-card__content--figma">
+                <div class="project-card__title">Daily diary</div>
+                <div class="project-card__subtitle">project</div>
+              </div>
+            </a>
+            <a href="/work/agency-creative-audio" class="project-card__link" data-thumb="./assets/thumbs/sample07.png"
+              data-slug="agency-creative-audio">
+              <div class="project-card__content project-card__content--retour">
+                <div class="project-card__title">AGENCY CREATIVE AUDIO</div>
+                <div class="project-card__subtitle">clone cording<br></div>
+              </div>
+            </a>
+            <a href="/work/namdo-mall" class="project-card__link" data-thumb="./assets/thumbs/sample06.png"
+              data-slug="namdo-mall">
+              <div class="project-card__content project-card__content--eames">
+                <div class="project-card__title">Namdo-mall</div>
+                <div class="project-card__subtitle">publishing, maintenance</div>
+              </div>
+            </a>
+            <a href="/work/yeonam-mall" class="project-card__link" data-thumb="./assets/thumbs/sample05.png"
+              data-slug="yeongam-mall">
+              <div class="project-card__content project-card__content--recchiuti">
+                <div class="project-card__title">Yeongam-mall</div>
+                <div class="project-card__subtitle">publishing, maintenance<br></div>
+              </div>
+            </a>
+            <a href="/work/ear-phone-brandpage" class="project-card__link" data-thumb="./assets/thumbs/sample09.png"
+              data-slug="ear-phone-brandpage">
+              <div class="project-card__content project-card__content--recchiuti">
+                <div class="project-card__title">Earphone-brand</div>
+                <div class="project-card__subtitle">project<br></div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

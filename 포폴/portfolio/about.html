@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style_bak.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div class="layout">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="main.html" aria-current="page" class="site-header__logo-link site-header__link--current">SilverIsland</a>
+        </div>
+        <nav class="site-header__nav">
+          <div class="site-header__nav-item">
+            <a href="main.html" aria-current="page" class="site-header__link">WORK</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="lab.html" class="site-header__link">LAB</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="about.html" class="site-header__link site-header__link--current">ABOUT</a>
+          </div>
+          <div class="site-header__nav-item">
+            <a href="#" class="site-header__link" id="contactModalBtn">CONTACT</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTACT 모달 -->
+    <div class="contact-modal" id="contactModal" aria-modal="true" role="dialog" tabindex="-1">
+      <div class="contact-modal__backdrop" id="contactModalBackdrop"></div>
+      <div class="contact-modal__content">
+        <button class="contact-modal__close" id="contactModalClose" aria-label="Close">&times;</button>
+        <h2 class="contact-modal__title">Contact</h2>
+        <ul class="contact-modal__list">
+          <li>
+            <a href="mailto:dmstja2110@naver.com" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">✉️</span>
+              dmstja2110@naver.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/your-github-id" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">👽</span>
+              github.com/your-github-id
+            </a>
+          </li>
+          <li>
+            <a href="https://blog.naver.com/coolkids2" class="contact-modal__link" target="_blank" rel="noopener">
+              <span class="contact-modal__icon">💫</span>
+              blog.naver.com/coolkids2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <main class="main-section">
+      <div class="project-list">
+        <!-- Side (시계/도시 등) -->
+        <aside class="project-list__side">
+          <!-- 시계 행 -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__circle"></div>
+              <div class="project-list__clock">
+                <div id="timeContainer">
+                  <div id="time">5:37</div>
+                  <div id="ampm">AM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 도시 행 -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__circle"></div>
+              <div class="project-list__city">
+                <a href="#" class="project-list__city-link">seoul</a>
+              </div>
+            </div>
+          </div>
+          <!-- 빈 행 (필요시 추가) -->
+          <div class="project-list__info-row">
+            <div class="project-list__circle-wrap">
+              <div class="project-list__city"></div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="about-main">
+          <div class="about-intro">
+            <p>
+              신입? 경력? 그 경계에서 균형을 잡는 <strong>중고신입 퍼블리셔 이은섬</strong>입니다.<br>
+              실무는 이미 한 번 겪어봤고, 꼼꼼함은 기본 옵션.
+              그렇다고 호기심과 패기까지 버리진 않았습니다.<br>
+              “배운 건 바로 써먹고, 모르면 부끄러워 말고 바로 묻는다.”
+              이런 자세로 프로젝트를 돌파합니다.<br>
+              현장의 감각, 신입의 에너지, 그리고 약간의 위트까지 챙긴 사람.<br>
+              INFJ로서 조용하지만 단단한 신념을 가지고 있고,
+              혼자 깊이 고민하지만 팀의 목표를 위해선 누구보다 주도적으로 움직입니다.
+              무심한 듯 보이지만, <strong>동료와 프로젝트 전체의 맥락</strong>을 먼저 생각합니다.
+              “대충”은 저와 가장 거리가 먼 단어입니다.<br>
+              마감 직전에도, 눈에 보이지 않는 부분까지 최적화하고 싶어서
+              한 번 더 체크하는 게 저의 직업병입니다.
+              팀과 함께 성장하는 사람, <strong>눈 한번 감고 믿고 맡겨보세요.</strong>
+            </p>
+          </div>
+          <div class="about-columns">
+            <div class="about-block">
+              <h2>Experience</h2>
+              <ul>
+                <li>
+                  <strong>(주)미스터로맨스</strong><br>
+                  November 2024 – July 2025<br>
+                  publisher<br>
+                  [publishing team]
+                </li>
+                <li>
+                  <strong>(주)오마이사이트</strong><br>
+                  April 2023 – March 2024<br>
+                  publisher<br>
+                  [Shopping Mall Development team]
+                </li>
+                <!-- 추가 경력 ... -->
+              </ul>
+            </div>
+            <div class="about-block">
+              <h2>Personality</h2>
+              <ul>
+                <li>
+                  자유롭게 도전하고 책임질 수 있는 업무를 선호
+                </li>
+                <li>
+                  새로운 프로젝트에 잘 적응함
+                </li>
+                <img src="./assets/thumbs/personalitytest.png" alt="personality test" class="about-aptitude-img">
+                <!-- 추가 수상 ... -->
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function updateClockKST() {
+      var now = new Date();
+      var utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      var kstNow = new Date(utc + (3600000 * 9)); // 9: 한국 시간대 오프셋
+
+      var h = kstNow.getHours();
+      var m = kstNow.getMinutes();
+      var mid = 'PM';
+
+      if (m < 10) m = "0" + m;
+      if (h > 12) { mid = 'PM'; h = h - 12; }
+      else if (h == 0) { h = 12; mid = 'AM'; }
+      else if (h < 12) { mid = 'AM'; }
+
+      var time = h + ':' + m;
+
+      document.getElementById('time').innerHTML = time;
+      document.getElementById('ampm').innerHTML = mid;
+
+      setTimeout(updateClockKST, 500);
+    }
+    updateClockKST();
+
+  // Contact 모달 열기
+  document.getElementById('contactModalBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('contactModal').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // 스크롤 방지
+    document.getElementById('contactModalClose').focus();
+  });
+  // Contact 모달 닫기 (버튼, 배경 클릭, ESC)
+  function closeContactModal() {
+    document.getElementById('contactModal').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.getElementById('contactModalClose').addEventListener('click', closeContactModal);
+  document.getElementById('contactModalBackdrop').addEventListener('click', closeContactModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContactModal();
+  });
+  </script>
+</body>
+</html>
