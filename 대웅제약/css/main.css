@@ -1,0 +1,922 @@
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 142px;
+  padding-bottom: 135px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container section {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.container .leftMenu {
+  position: fixed;
+  width: 91px;
+  min-width: 91px;
+  height: 208px;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  left: max(calc(((100vw - 1400px) / 2) - 158px));
+  z-index: 1;
+  transition: opacity 0.2s;
+}
+
+.container .leftMenu ul {
+  position: absolute;
+  left: 0;
+}
+
+.container .leftMenu ul li:first-child a {
+  padding-top: 0;
+}
+
+.container .leftMenu ul li a {
+  display: block;
+  padding: 16px 0;
+  color: #c3c3c3;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: -0.32px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.15s ease 150ms;
+  transition: all 0.15s ease 150ms;
+}
+
+.container .leftMenu ul li a:hover,
+.container .leftMenu ul li a.active {
+  color: #ff5026;
+}
+
+.container .rightContent {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 208px;
+}
+
+.container .rightContent .section1 {
+  width: 1400px;
+  display: flex;
+  margin: 0 auto;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container .rightContent .section1 .main {
+  position: relative;
+  display: block;
+  width: 680px;
+  height: 100%;
+  padding: 40px 48px;
+  border-radius: 12px;
+  background: #363030;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container .rightContent .section1 .main .mainText01 {
+  position: relative;
+  top: 510px;
+  margin-bottom: 70px;
+  overflow: hidden;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 56px */
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .rightContent .section1 .main:hover .mainText01 {
+  color: #ff5026;
+}
+
+.container .rightContent .section1 .main .mainPressInfo {
+  position: relative;
+  top: 511px;
+  height: unset;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.container .rightContent .section1 .main .mainPressInfo .date {
+  padding: 11.5px 0;
+}
+
+.container .rightContent .section1 .main .mainPressInfo span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.32px;
+  border-radius: 999px;
+}
+
+.container .rightContent .section1 .main h3 {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+.container .rightContent .section1 .main div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 510px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container .rightContent .section1 .main .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .rightContent .section1 .main .imgBox img.filter {
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.container .rightContent .section1 .side {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container .rightContent .section1 .side .top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 330px;
+  border-radius: 12px;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.container .rightContent .section1 .side .top:hover .pressContent {
+  text-decoration: underline;
+}
+
+.container .rightContent .section1 .side .top a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.container .rightContent .section1 .side .top h3 {
+  color: #201d1d;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+}
+
+.container .rightContent .section1 .side .top div.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  width: 363px;
+  padding: 30px 48px 30px 30px;
+}
+
+.container .rightContent .section1 .side .top a>div {
+  display: flex;
+  height: 100%;
+}
+
+.container .rightContent .section1 .side .top div.title p.pressTitle {
+  color: #ff5026;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.28px;
+}
+
+.container .rightContent .section1 .side .top div.title p.pressContent {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: #201d1d;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+}
+
+.container .rightContent .section1 .side .top div.imgBox {
+  position: relative;
+  width: 338px;
+  margin-left: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container .rightContent .section1 .side .top div.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .rightContent .section1 .side .top div.imgBox img.filter {
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.container .rightContent .section1 .side .bottom {
+  height: 499px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+
+.container .rightContent .section1 .side .bottom>div {
+  position: relative;
+  width: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container .rightContent .section1 .side .bottom>div h3 {
+  position: relative;
+  padding: 24px 30px 0;
+  color: #fff;
+  z-index: 2;
+  background: url("../image/main/25_re/arrow.png") no-repeat top 29px right 30px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+}
+
+.container .rightContent .section1 .side .bottom>div .imgBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section1 .side .bottom>div .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .rightContent .section1 .side .bottom .stock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 175px;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  background: #eee;
+}
+
+.container .rightContent .section1 .side .bottom .stock a:hover .stockPrice strong {
+  font-size: 35px;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section1 .side .bottom .stock a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.container .rightContent .section1 .side .bottom .stock h3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: url("../image/main/25_re/arrowBlack.svg") no-repeat top 29px right 30px;
+  color: #201d1d;
+  font-weight: 600;
+}
+
+.container .rightContent .section1 .side .bottom .stock h3 span {
+  color: #b4b4b4;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  /* 12px */
+  letter-spacing: -0.24px;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo {
+  padding: 24px 30px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo .stockPrice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo .stockPrice span {
+  display: block;
+  color: #ff5026;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 12px */
+  letter-spacing: -0.24px;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo .stockPrice strong {
+  color: #201d1d;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 32px */
+  letter-spacing: -0.64px;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo .stockDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo .stockDetails .stockChange {
+  color: #201d1d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 12px */
+  letter-spacing: -0.24px;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo .stockDetails .stockVolume {
+  color: #201d1d;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  /* 14px */
+  letter-spacing: -0.28px;
+}
+
+.container .rightContent .section1 .side .bottom .stock .stockInfo .stockDetails .stockVolume .upDown {
+  margin-right: 8px;
+}
+
+.container .rightContent .section1 .side .bottom .value {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  /* 2번 요소가 3행 전체를 차지 */
+  height: 281px;
+  background: #bbb;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section1 .side .bottom .value .imgBox:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section1 .side .bottom .value:hover .imgBox:before {
+  content: "";
+  position: absolute;
+  background: #00000066;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section1 .side .bottom .news {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  height: 300px;
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
+  background: #ff5026;
+}
+
+.container .rightContent .section1 .side .bottom .news h3 a {
+  width: 100%;
+  display: block;
+}
+
+.container .rightContent .section1 .side .bottom .news ul {
+  padding: 0 30px 24px;
+}
+
+.container .rightContent .section1 .side .bottom .news ul li:first-child {
+  /* background: #fff; */
+}
+
+.container .rightContent .section1 .side .bottom .news ul li {
+  display: flex;
+  padding: 12px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 12px;
+}
+
+.container .rightContent .section1 .side .bottom .news ul li a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration-color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .rightContent .section1 .side .bottom .news ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .rightContent .section1 .side .bottom .news ul li a div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  /* 12px */
+  letter-spacing: -0.24px;
+  color: #fff;
+}
+
+ul li span.category {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 12px */
+  letter-spacing: -0.24px;
+}
+
+.container .rightContent .section1 .side .bottom .news ul li p {
+  margin-bottom: 12px;
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+}
+
+.container .rightContent .section1 .side .bottom .news ul li:first-child p {
+  /* color: #201d1d; */
+}
+
+.container .rightContent .section1 .side .bottom .news ul li:first-child a div {
+  /* color: #808080; */
+}
+
+.container .rightContent .section1 .side .bottom .sns {
+  grid-row: 3 / 3;
+  grid-column: 2 / 2;
+  height: 195px;
+  background: #ccc;
+}
+
+.container .rightContent .section1 .side .bottom .value p,
+.container .rightContent .section1 .side .bottom .sns p {
+  position: absolute;
+  padding: 24px 30px;
+  bottom: 0;
+  color: #fff;
+  z-index: 10;
+}
+
+.container .rightContent .section1 .side .bottom .value p {
+  color: #fff;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  /* 28px */
+  letter-spacing: -0.4px;
+  overflow: hidden;
+}
+
+.container .rightContent .section1 .side .bottom .sns:hover p {
+  font-size: 22px;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section1 .side .bottom .sns p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  /* 16px */
+  letter-spacing: -0.32px;
+  text-transform: capitalize;
+  transition: all 0.2s;
+}
+
+.container .rightContent .section2 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.container .rightContent .section2 .title {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.container .rightContent .section2 ul {
+  width: 684px;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.container .rightContent .section2 ul li {
+  padding: 37px 32px;
+  margin-bottom: 24px;
+}
+
+.container .rightContent .section2 ul li a {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container .rightContent .section2 ul li p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  overflow: hidden;
+  color: #201d1d;
+  text-overflow: ellipsis;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  /* 32px */
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+}
+
+.container .rightContent .section2 ul li a div {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  /* 14px */
+  letter-spacing: -0.28px;
+}
+
+.container .rightContent .section2 ul li a div span {
+  color: #ff5026;
+}
+
+.secSwiper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container .rightContent .section2 .secSwiper .swiper-wrapper {
+  width: 688px;
+  height: 754px;
+  margin-top: -233px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container .rightContent .section2 ul li.active {
+  border-radius: 12px;
+  background: #f8f8f8;
+  backdrop-filter: blur(60px);
+}
+
+.container .rightContent .section2 ul li.active p {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.container .rightContent .section2 span.swiper-notification {
+  display: none;
+}
+
+.container .rightContent .section2 .info {
+  width: 688px;
+  height: 756px;
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background: #201d1d;
+  overflow: hidden;
+}
+
+.container .rightContent .section2 .info .interviewName {
+  color: var(--Dark-Gray, #808080);
+
+  /* Body/Body 3A */
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  /* 18px */
+  letter-spacing: -0.36px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.container .rightContent .section2 .info .interviewTitle {
+  color: var(--Light-Gray, #f8f8f8);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  /* 32px */
+  letter-spacing: -0.4px;
+}
+
+.container .rightContent .section2 .info:hover .interviewTitle {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.container .rightContent .section2 .info>div {
+  display: flex;
+  width: 688px;
+  padding: 30px 42px 30px;
+  align-items: flex-start;
+  background: #201d1d;
+  justify-content: space-between;
+}
+
+.container .rightContent .section2 .info>div div {
+  height: 66px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  justify-content: end;
+}
+
+.container .rightContent .section2 .info>div .name {
+  color: #fff;
+  font-family: "NanumSquare Neo OTF";
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1.6px;
+  text-transform: capitalize;
+  height: 32px;
+}
+
+.container .rightContent .section2 .info>div .team {
+  color: #707070;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.44px;
+  text-transform: capitalize;
+}
+
+.container .rightContent .section2 .info>div a.view {
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 24px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  margin-top: 7px;
+  /* 25-08-22 수정 */
+}
+
+.container .rightContent .section3 {
+  position: relative;
+}
+
+.container .rightContent .section3 .title {
+  position: absolute;
+}
+
+.container .rightContent .section3 .section3Content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.container .rightContent .section3 .section3Content div {
+  position: relative;
+  margin-top: -6px;
+}
+
+.container .rightContent .section3 .section3Content ul {
+  position: relative;
+  top: 179px;
+  width: 684px;
+  height: 36px;
+  display: flex;
+  gap: 32px;
+  z-index: 90;
+}
+
+.container .rightContent .section3 .section3Content ul li {
+  padding: 6px;
+  -webkit-transition: all 0.15s linear 150ms;
+  transition: all 0.15s linear 150ms;
+}
+
+.container .rightContent .section3 .section3Content ul li.active span,
+.container .rightContent .section3 .section3Content ul li:hover span {
+  color: #ff5026;
+  border-bottom: 2px solid #ff5026;
+}
+
+.container .rightContent .section3 .section3Content ul li a {
+  position: relative;
+  display: block;
+  color: #000;
+  -webkit-transition: all 0.15s linear 150ms;
+  transition: all 0.15s linear 150ms;
+}
+
+.container .rightContent .section3 .section3Content ul li a span {
+  width: 100%;
+  color: #929292;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  /* 20px */
+  letter-spacing: -0.4px;
+  padding: 8px 0;
+}
+
+.container .rightContent .section4 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.container .rightContent .section4 .section4Content {
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+}
+
+.container .rightContent .section4 .section4Content ul {
+  width: calc(25% - 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.container .rightContent .section4 .section4Content ul li {
+  width: 100%;
+  color: #201d1d;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.52px;
+}
+
+.container .rightContent .section4 .section4Content ul li:first-child {
+  padding-bottom: 16px;
+}
+
+.container .rightContent .section4 .section4Content ul li a {
+  display: flex;
+  padding: 22px 28px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: #646464;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  /* 18px */
+  letter-spacing: -0.36px;
+  border-radius: 12px;
+  background: url("/resource/p/kr/image/main/25_re/arrow_grey.png") no-repeat center right 32px #f8f8f8;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.container .rightContent .section4 .section4Content ul li a:hover {
+  color: #fff;
+  background: url("/resource/p/kr/image/main/25_re/arrow_orange.png") no-repeat center right 32px #201d1d;
+}
+
+.container ul.sideTool span {
+  width: 64px;
+  height: 64px;
+  display: block;
+  color: #201d1d;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.28px;
+  border: 1px solid #201d1d;
+  border-radius: 999px;
+  line-height: 64px;
+}
+
+@media screen and (max-width: 1718px) {
+  .container .leftMenu {
+    left: 0px;
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  .container .leftMenu {
+    opacity: 0;
+    cursor: none;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+}
