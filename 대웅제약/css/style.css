@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   min-width: 1280px;
-  /*overflow-x: auto !important;*/
+overflow-x: hidden;
 }
 
 body {
@@ -93,6 +93,12 @@ button {
   border: none;
 }
 
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .wrap {
   width: 100%;
@@ -116,6 +122,8 @@ button {
   min-width: 1280px;
   color: #000;
   font-size: 14px;
+  background: #fff;
+  border: 1px solid #ddd;
 }
 
 .header .header-inner::after {
